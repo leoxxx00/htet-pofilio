@@ -7,24 +7,37 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #0b3d91; /* Dark blue background */
+            color: #ffffff; /* White text color */
         }
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
+            background-color: #162447; /* Slightly lighter dark blue for the container */
+            border-radius: 10px;
         }
         .image-section {
             margin-bottom: 30px;
+            border: 1px solid #1f4068; /* Darker blue border for sections */
+            padding: 10px;
+            border-radius: 5px;
         }
         .image-section img {
             width: 100%;
             height: auto;
+            border-radius: 5px;
         }
         .image-section h2 {
             margin-top: 0;
+            color: #e43f5a; /* Highlight heading with a contrasting color */
         }
         .description {
             margin-top: 10px;
+            color: #c4c4c4; /* Light grey for descriptions */
+        }
+        a {
+            color: #4da8da; /* Light blue for links */
         }
     </style>
 </head>
@@ -71,34 +84,39 @@
         <div class="image-section">
             <h2>Image 7: Confusion Matrix of Model 4</h2>
             <img src="./assets/images/9.png" alt="Confusion Matrix of Model 4">
-            <p class="description">Summary:
-
-COVID:
-
-9 True Positives
-5 False Negatives (predicted as Normal)
-3 False Negatives (predicted as Pneumonia)
-Normal:
-
-3 False Positives (predicted as COVID)
-15 True Positives
-0 False Negatives (predicted as Pneumonia)
-Pneumonia:
-
-0 False Positives (predicted as COVID)
-0 False Positives (predicted as Normal)
-16 True Positives
-The diagonal elements represent the correct predictions, and the off-diagonal elements represent the misclassifications. From this matrix, we can infer:
-
-The model performs well in classifying Pneumonia, with no misclassifications (100% accuracy for Pneumonia).
-The model has some difficulty distinguishing between COVID and Normal, with several misclassifications between these two classes.
-</p>
+            <p class="description">
+                Summary:
+                <br>
+                <strong>COVID:</strong>
+                <ul>
+                    <li>9 True Positives</li>
+                    <li>5 False Negatives (predicted as Normal)</li>
+                    <li>3 False Negatives (predicted as Pneumonia)</li>
+                </ul>
+                <strong>Normal:</strong>
+                <ul>
+                    <li>3 False Positives (predicted as COVID)</li>
+                    <li>15 True Positives</li>
+                    <li>0 False Negatives (predicted as Pneumonia)</li>
+                </ul>
+                <strong>Pneumonia:</strong>
+                <ul>
+                    <li>0 False Positives (predicted as COVID)</li>
+                    <li>0 False Positives (predicted as Normal)</li>
+                    <li>16 True Positives</li>
+                </ul>
+                The diagonal elements represent the correct predictions, and the off-diagonal elements represent the misclassifications. From this matrix, we can infer:
+                <ul>
+                    <li>The model performs well in classifying Pneumonia, with no misclassifications (100% accuracy for Pneumonia).</li>
+                    <li>The model has some difficulty distinguishing between COVID and Normal, with several misclassifications between these two classes.</li>
+                </ul>
+            </p>
         </div>
 
         <div class="image-section">
-            <h2>Image 8: Development history</h2>
-            <img src="./assets/images/10.png" alt="Deployment History">
-            <p class="description">Development history charts and best model highlight </p>
+            <h2>Image 8: Development History</h2>
+            <img src="./assets/images/10.png" alt="Development History">
+            <p class="description">Development history charts and best model highlight.</p>
         </div>
     </div>
 </body>
