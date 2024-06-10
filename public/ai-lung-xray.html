@@ -35,13 +35,13 @@
         <div class="image-section">
             <h2>Image 1: X-ray of a Normal Lung</h2>
             <img src="./assets/images/3.png" alt="X-ray of a Normal Lung">
-            <p class="description">This image represents a normal, healthy lung X-ray. The AI model identifies such images with high accuracy, ensuring that normal cases are not misdiagnosed.</p>
+            <p class="description">This image represents a normal, healthy lung X-ray. The AI model accurately identifies such images, ensuring that normal cases are not misdiagnosed.</p>
         </div>
 
         <div class="image-section">
             <h2>Image 2: X-ray of a Lung with COVID-19</h2>
             <img src="./assets/images/4.png" alt="X-ray of a Lung with COVID-19">
-            <p class="description">Depicting a lung X-ray of a patient with COVID-19, this image highlights the model's ability to detect COVID-19 specific patterns in lung images.</p>
+            <p class="description">Depicting a lung X-ray of a patient with COVID-19, this image highlights the model's ability to detect COVID-19-specific patterns in lung images.</p>
         </div>
 
         <div class="image-section">
@@ -71,13 +71,34 @@
         <div class="image-section">
             <h2>Image 7: Confusion Matrix of Model 4</h2>
             <img src="./assets/images/9.png" alt="Confusion Matrix of Model 4">
-            <p class="description">The confusion matrix for Model 4, highlighting its performance in correctly classifying COVID-19, pneumonia, and normal cases.</p>
+            <p class="description">Summary:
+
+COVID:
+
+9 True Positives
+5 False Negatives (predicted as Normal)
+3 False Negatives (predicted as Pneumonia)
+Normal:
+
+3 False Positives (predicted as COVID)
+15 True Positives
+0 False Negatives (predicted as Pneumonia)
+Pneumonia:
+
+0 False Positives (predicted as COVID)
+0 False Positives (predicted as Normal)
+16 True Positives
+The diagonal elements represent the correct predictions, and the off-diagonal elements represent the misclassifications. From this matrix, we can infer:
+
+The model performs well in classifying Pneumonia, with no misclassifications (100% accuracy for Pneumonia).
+The model has some difficulty distinguishing between COVID and Normal, with several misclassifications between these two classes.
+</p>
         </div>
 
         <div class="image-section">
-            <h2>Image 8: Deployment Interface</h2>
-            <img src="./assets/images/10.png" alt="Deployment Interface">
-            <p class="description">A snapshot of the user interface used for deploying the model, allowing healthcare professionals to upload X-ray images and receive diagnostic results.</p>
+            <h2>Image 8: Development history</h2>
+            <img src="./assets/images/10.png" alt="Deployment History">
+            <p class="description">Development history charts and best model highlight </p>
         </div>
     </div>
 </body>
