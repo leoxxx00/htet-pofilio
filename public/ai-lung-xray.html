@@ -6,46 +6,75 @@
     <title>AI Model for Lung X-ray Analysis</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             background-color: #0b3d91; /* Dark blue background */
             color: #ffffff; /* White text color */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
         .container {
-            max-width: 800px;
-            margin: 0 auto;
+            max-width: 900px;
+            margin: 20px;
             padding: 20px;
-            background-color: #162447; /* Slightly lighter dark blue for the container */
+            background-color: #1c2a48; /* Slightly lighter dark blue for the container */
             border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1, h2 {
+            color: #e43f5a; /* Highlight heading with a contrasting color */
+            text-align: center;
+        }
+        h2 {
+            font-size: 1.5em;
         }
         .image-section {
             margin-bottom: 30px;
             border: 1px solid #1f4068; /* Darker blue border for sections */
-            padding: 10px;
-            border-radius: 5px;
+            padding: 15px;
+            border-radius: 10px;
+            background-color: #24355e; /* Darker background for sections */
         }
         .image-section img {
             width: 100%;
             height: auto;
             border-radius: 5px;
-        }
-        .image-section h2 {
-            margin-top: 0;
-            color: #e43f5a; /* Highlight heading with a contrasting color */
+            margin-bottom: 10px;
         }
         .description {
             margin-top: 10px;
             color: #c4c4c4; /* Light grey for descriptions */
+            line-height: 1.6;
         }
         a {
             color: #4da8da; /* Light blue for links */
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        a:hover {
+            color: #82c0ff;
         }
         .links {
             margin-top: 10px;
             margin-bottom: 20px;
+            text-align: center;
         }
         .links a {
-            display: block;
-            margin-bottom: 5px;
+            display: inline-block;
+            margin: 5px 10px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: #0b3d91; /* Dark blue background for buttons */
+            color: #ffffff; /* White text color */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+        .links a:hover {
+            background-color: #1f4068;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
@@ -53,8 +82,9 @@
     <div class="container">
         <h1>AI Model for Detecting COVID-19, Pneumonia, and Normal Lungs from X-ray Images</h1>
         <div class="links">
-            <a href="https://lnkd.in/efdbiizS" target="_blank">Model Download Link</a>
-            <a href="https://lnkd.in/ekCTy3wF" target="_blank">GitHub</a>
+            <a href="https://drive.google.com/file/d/1-ASIwLN-5VHoQQHWpBYBMOEbsnYV2JXW/view?usp=share_link" target="_blank">Model Download Link</a>
+            <a href="https://github.com/leoxxx00/XVI.git" target="_blank">GitHub</a>
+            <a href="https://huggingface.co/spaces/resberry/X-vis" target="_blank">To personally test the AI, click here</a>
         </div>
         
         <div class="image-section">
@@ -96,36 +126,35 @@
         <div class="image-section">
             <h2>Image 7: Confusion Matrix of Model 4</h2>
             <img src="../assets/images/9.png" height="200" alt="Confusion Matrix of Model 4">
-           <p class="description">
-            Summary
-            <br>
-            <strong>COVID:</strong>
-            <ul>
-            <li>20 True Positives</li>
-            <li>1 False Negative (predicted as Normal)</li>
-            <li>0 False Negatives (predicted as Pneumonia)</li>
-            </ul>
-            <strong>Normal:</strong>
-            <ul>
-        <li>1 False Positive (predicted as COVID)</li>
-        <li>11 True Positives</li>
-        <li>0 False Negatives (predicted as Pneumonia)</li>
-    </ul>
-    <strong>Pneumonia:</strong>
-    <ul>
-        <li>0 False Positives (predicted as COVID)</li>
-        <li>0 False Positives (predicted as Normal)</li>
-        <li>18 True Positives</li>
-    </ul>
-    The diagonal elements represent the correct predictions, and the off-diagonal elements represent the misclassifications. From this matrix, we can infer:
-    <ul>
-        <li>The model performs excellently in classifying Pneumonia, with no misclassifications (100% accuracy for Pneumonia).</li>
-        <li>The model shows high accuracy in classifying COVID with only one misclassification as Normal.</li>
-        <li>There is some difficulty in distinguishing Normal cases, as there is one misclassification as COVID.</li>
-        <li>Overall, the model demonstrates strong performance across all classes with minimal misclassifications.</li>
-    </ul>
-</p>
-
+            <p class="description">
+                Summary
+                <br>
+                <strong>COVID:</strong>
+                <ul>
+                    <li>20 True Positives</li>
+                    <li>1 False Negative (predicted as Normal)</li>
+                    <li>0 False Negatives (predicted as Pneumonia)</li>
+                </ul>
+                <strong>Normal:</strong>
+                <ul>
+                    <li>1 False Positive (predicted as COVID)</li>
+                    <li>11 True Positives</li>
+                    <li>0 False Negatives (predicted as Pneumonia)</li>
+                </ul>
+                <strong>Pneumonia:</strong>
+                <ul>
+                    <li>0 False Positives (predicted as COVID)</li>
+                    <li>0 False Positives (predicted as Normal)</li>
+                    <li>18 True Positives</li>
+                </ul>
+                The diagonal elements represent the correct predictions, and the off-diagonal elements represent the misclassifications. From this matrix, we can infer:
+                <ul>
+                    <li>The model performs excellently in classifying Pneumonia, with no misclassifications (100% accuracy for Pneumonia).</li>
+                    <li>The model shows high accuracy in classifying COVID with only one misclassification as Normal.</li>
+                    <li>There is some difficulty in distinguishing Normal cases, as there is one misclassification as COVID.</li>
+                    <li>Overall, the model demonstrates strong performance across all classes with minimal misclassifications.</li>
+                </ul>
+            </p>
         </div>
 
         <div class="image-section">
