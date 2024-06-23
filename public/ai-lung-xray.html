@@ -80,7 +80,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>AI Model for Detecting COVID-19, Pneumonia, and Normal Lungs from X-ray Images</h1>
+        <h1>AI Model for Detecting COVID-19, Pneumonia, TB, and Normal Lungs from X-ray Images</h1>
         <div class="links">
             <a href="https://drive.google.com/file/d/1-ASIwLN-5VHoQQHWpBYBMOEbsnYV2JXW/view?usp=share_link" target="_blank">Model Download Link</a>
             <a href="https://github.com/leoxxx00/XVI.git" target="_blank">GitHub</a>
@@ -88,79 +88,59 @@
         </div>
         
         <div class="image-section">
-            <h2>X-ray of a Normal Lung</h2>
-            <img src="../assets/images/3.png" height="200" alt="X-ray of a Normal Lung">
-            <p class="description">This image represents a normal, healthy lung X-ray. The AI model accurately identifies such images, ensuring that normal cases are not misdiagnosed.</p>
-        </div>
-
-        <div class="image-section">
-            <h2>X-ray of a Lung with COVID-19</h2>
-            <img src="../assets/images/4.png" height="200" alt="X-ray of a Lung with COVID-19">
-            <p class="description">Depicting a lung X-ray of a patient with COVID-19, this image highlights the model's ability to detect COVID-19-specific patterns in lung images.</p>
-        </div>
-
-        <div class="image-section">
-            <h2>X-ray of a Lung with Pneumonia</h2>
-            <img src="../assets/images/5.png" height="200" alt="X-ray of a Lung with Pneumonia">
-            <p class="description">An X-ray showing a lung affected by pneumonia. The model accurately distinguishes between pneumonia and other conditions.</p>
-        </div>
-
-        <div class="image-section">
-            <h2>Training Data Augmentation Process</h2>
-            <img src="../assets/images/6.png" height="200" alt="Training Data Augmentation Process">
-            <p class="description">Illustrates the data augmentation techniques applied during training, such as rotations, shifts, and flips, to enhance model robustness.</p>
-        </div>
-
-        <div class="image-section">
-            <h2>Model Architecture Visualization</h2>
-            <img src="../assets/images/7.png" height="200" alt="Model 4 Architecture Visualization">
-            <p class="description">A detailed diagram of the architecture of XVI model version5, showing convolutional layers, batch normalization, and fully connected layers.</p>
-        </div>
-
-        <div class="image-section">
             <h2>Training Loss and Accuracy Curves</h2>
-            <img src="../assets/images/8.png" height="200" alt="Training Loss and Accuracy Curves">
-            <p class="description">Graphs showing the training loss and accuracy over epochs for Model 4, demonstrating the model's learning progression.</p>
+            <img src="path_to_your_image/Screenshot 2024-06-23 at 16.37.24.png" height="200" alt="Training Loss and Accuracy Curves">
+            <p class="description">Graphs showing the training loss and accuracy over epochs for the model, demonstrating the model's learning progression.</p>
+        </div>
+
+        <div class="image-section">
+            <h2>Final Model Training Loss and Accuracy</h2>
+            <img src="path_to_your_image/Screenshot 2024-06-23 at 16.37.31.png" height="200" alt="Final Model Training Loss and Accuracy">
+            <p class="description">Training loss and accuracy for the final model, showing performance over training epochs.</p>
         </div>
 
         <div class="image-section">
             <h2>Confusion Matrix</h2>
-            <img src="../assets/images/9.png" height="200" alt="Confusion Matrix of Model 4">
+            <img src="path_to_your_image/9.png" height="200" alt="Confusion Matrix of Model">
             <p class="description">
                 Summary
                 <br>
                 <strong>COVID:</strong>
                 <ul>
-                    <li>20 True Positives</li>
-                    <li>1 False Negative (predicted as Normal)</li>
-                    <li>0 False Negatives (predicted as Pneumonia)</li>
+                    <li>143 True Positives</li>
+                    <li>7 False Negatives (predicted as Normal)</li>
+                    <li>3 False Negatives (predicted as Pneumonia)</li>
+                    <li>3 False Negatives (predicted as TB)</li>
                 </ul>
                 <strong>Normal:</strong>
                 <ul>
-                    <li>1 False Positive (predicted as COVID)</li>
-                    <li>11 True Positives</li>
-                    <li>0 False Negatives (predicted as Pneumonia)</li>
+                    <li>123 True Positives</li>
+                    <li>0 False Positives (predicted as COVID)</li>
+                    <li>1 False Positives (predicted as Pneumonia)</li>
+                    <li>2 False Positives (predicted as TB)</li>
                 </ul>
                 <strong>Pneumonia:</strong>
                 <ul>
-                    <li>0 False Positives (predicted as COVID)</li>
-                    <li>0 False Positives (predicted as Normal)</li>
-                    <li>18 True Positives</li>
+                    <li>90 True Positives</li>
+                    <li>1 False Positives (predicted as COVID)</li>
+                    <li>2 False Positives (predicted as Normal)</li>
+                    <li>1 False Positives (predicted as TB)</li>
+                </ul>
+                <strong>TB:</strong>
+                <ul>
+                    <li>96 True Positives</li>
+                    <li>2 False Positives (predicted as COVID)</li>
+                    <li>2 False Positives (predicted as Normal)</li>
+                    <li>1 False Positives (predicted as Pneumonia)</li>
                 </ul>
                 The diagonal elements represent the correct predictions, and the off-diagonal elements represent the misclassifications. From this matrix, we can infer:
                 <ul>
-                    <li>The model performs excellently in classifying Pneumonia, with no misclassifications (100% accuracy for Pneumonia).</li>
-                    <li>The model shows high accuracy in classifying COVID with only one misclassification as Normal.</li>
-                    <li>There is some difficulty in distinguishing Normal cases, as there is one misclassification as COVID.</li>
+                    <li>The model performs excellently in classifying TB and Pneumonia, with high accuracy and minimal misclassifications.</li>
+                    <li>The model shows high accuracy in classifying COVID with few misclassifications as Normal, Pneumonia, and TB.</li>
+                    <li>There is some difficulty in distinguishing Normal cases, with misclassifications as COVID, Pneumonia, and TB.</li>
                     <li>Overall, the model demonstrates strong performance across all classes with minimal misclassifications.</li>
                 </ul>
             </p>
-        </div>
-
-        <div class="image-section">
-            <h2>Image 8: Development History</h2>
-            <img src="../assets/images/10.png" height="200" alt="Development History">
-            <p class="description">Development history charts and best model highlight.</p>
         </div>
     </div>
 </body>
