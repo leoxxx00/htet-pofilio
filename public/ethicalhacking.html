@@ -6,9 +6,9 @@
     <title>AI Projects by Htet</title>
     <style>
         body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #0b3d91; /* Dark blue background */
-            color: #ffffff; /* White text color */
+            font-family: 'Courier New', monospace; /* Monospaced font for terminal look */
+            background-color: #000000; /* Black background */
+            color: #00ff00; /* Neon green text color */
             margin: 0;
             padding: 0;
             display: flex;
@@ -20,12 +20,13 @@
             max-width: 900px;
             margin: 20px;
             padding: 20px;
-            background-color: #1c2a48; /* Slightly lighter dark blue for the container */
+            background-color: #111111; /* Dark grey background for container */
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 8px rgba(255, 0, 0, 0.2); /* Red shadow for hacker vibe */
+            border: 1px solid #ff0000; /* Red border to enhance the hacker look */
         }
         h1, h2 {
-            color: #e43f5a; /* Highlight heading with a contrasting color */
+            color: #ff0000; /* Red for headings */
             text-align: center;
         }
         h2 {
@@ -33,22 +34,22 @@
         }
         .project-section {
             margin-bottom: 30px;
-            border: 1px solid #1f4068; /* Darker blue border for sections */
+            border: 1px solid #00ff00; /* Neon green border for sections */
             padding: 15px;
             border-radius: 10px;
-            background-color: #24355e; /* Darker background for sections */
+            background-color: #222222; /* Slightly lighter black for section background */
         }
         .project-section p {
-            color: #c4c4c4; /* Light grey for descriptions */
+            color: #cccccc; /* Light grey for descriptions */
             line-height: 1.6;
         }
         a {
-            color: #4da8da; /* Light blue for links */
+            color: #00ff00; /* Neon green for links */
             text-decoration: none;
             transition: color 0.3s;
         }
         a:hover {
-            color: #82c0ff;
+            color: #ff0000; /* Red color on hover */
         }
         .explore-link {
             display: block;
@@ -56,14 +57,15 @@
             margin: 20px 0;
             padding: 10px 20px;
             border-radius: 5px;
-            background-color: #0b3d91; /* Dark blue background for buttons */
-            color: #ffffff; /* White text color */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            background-color: #111111; /* Dark background for buttons */
+            color: #00ff00; /* Neon green text for buttons */
+            box-shadow: 0 2px 5px rgba(255, 0, 0, 0.5); /* Red shadow for buttons */
             transition: background-color 0.3s, box-shadow 0.3s;
         }
         .explore-link:hover {
-            background-color: #1f4068;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            background-color: #ff0000;
+            color: #000000;
+            box-shadow: 0 4px 10px rgba(255, 0, 0, 0.8);
         }
     </style>
 </head>
@@ -73,18 +75,17 @@
         <div class="project-section">
             <h2>AI for Lung X-ray Analysis</h2>
             <p>
-                This project involves training an AI model to detect COVID-19, Pneumonia, TB and Normal conditions from lung X-ray images. The model uses advanced convolutional neural networks (CNN) and has been trained on a diverse dataset to ensure high accuracy.
+                This project involves training an AI model to detect COVID-19, Pneumonia, TB, and Normal conditions from lung X-ray images. The model uses advanced convolutional neural networks (CNN) and has been trained on a diverse dataset to ensure high accuracy.
             </p>
             <a class="explore-link" href="https://huggingface.co/spaces/resberry/X-vis" target="_blank">Click here to explore more</a>
         </div> 
         <div class="project-section">
-            <h2>Investigate various AI model that can detect ECG signals and classify 5 classes using large ECG PTB XL dataset</h2>
+            <h2>Investigating AI models for ECG signal detection</h2>
             <p>
-                LSTM with the extra layer model architecture is the best among the 5 AI models with 90% f1 accuracy on normal data and 60% to 80% on the other 4 abnormal classes.
+                LSTM with an extra layer model architecture performs the best among five AI models, achieving 90% f1 accuracy on normal data and 60% to 80% on other abnormal classes.
             </p>
             <a class="explore-link" href="https://github.com/leoxxx00/ECG.git" target="_blank">Click here to explore more</a>
         </div> 
     </div>
-    
 </body>
 </html>
