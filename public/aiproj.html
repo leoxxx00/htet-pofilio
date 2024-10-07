@@ -9,24 +9,29 @@
 
         body {
             font-family: 'Roboto', sans-serif;
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* Gradient dark background */
-            color: #ffffff;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            color: #ffffff;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            background-image: url('https://cdn.pixabay.com/photo/2017/08/26/12/38/artificial-intelligence-2684923_960_720.jpg'); /* AI-themed background */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Fix the background */
         }
         
         .container {
             max-width: 900px;
             margin: 20px;
             padding: 25px;
-            background-color: rgba(28, 42, 72, 0.9); /* Darker semi-transparent background */
+            background-color: rgba(28, 42, 72, 0.95); /* Darker semi-transparent background */
             border-radius: 15px;
             box-shadow: 0 8px 16px rgba(0, 255, 255, 0.2);
             border: 1px solid #00ffea;
+            backdrop-filter: blur(6px); /* Adds a nice blur effect */
         }
 
         h1 {
@@ -34,6 +39,7 @@
             text-align: center;
             font-size: 2.5em;
             text-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea;
+            margin-bottom: 20px;
         }
 
         h2 {
@@ -50,6 +56,12 @@
             border-radius: 12px;
             border: 1px solid #1b9aaa;
             box-shadow: 0 4px 8px rgba(0, 255, 255, 0.2);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .project-section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 255, 255, 0.4);
         }
 
         .project-section p {
@@ -90,6 +102,7 @@
 <body>
     <div class="container">
         <h1>AI Projects by Htet</h1>
+
         <div class="project-section">
             <h2>AI for Lung X-ray Analysis</h2>
             <p>
@@ -97,6 +110,7 @@
             </p>
             <a class="explore-link" href="https://huggingface.co/spaces/resberry/X-vis" target="_blank">Click here to explore more</a>
         </div> 
+        
         <div class="project-section">
             <h2>ECG Signal Classification with AI</h2>
             <p>
@@ -104,6 +118,7 @@
             </p>
             <a class="explore-link" href="https://github.com/leoxxx00/ECG.git" target="_blank">Click here to explore more</a>
         </div> 
+
     </div>
 </body>
 </html>
