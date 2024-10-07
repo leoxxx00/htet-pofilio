@@ -1,80 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ethical Hacking Simulations</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Orbitron:wght@500&display=swap');
+
         body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #0d0d0d; /* Dark, covert background */
-            color: #cfd2d6; /* Light grey text for readability */
+            font-family: 'Roboto Mono', monospace;
+            background-color: #0d0d0d;
+            background-image: url('https://images.idgesg.net/images/article/2021/05/kali-linux-logo-100892657-large.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #cfd2d6;
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            backdrop-filter: blur(8px); /* Blur for the background */
         }
+
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 20px;
             padding: 30px;
-            background-color: #1c1e24; /* Dark grey background for container */
+            background-color: rgba(28, 30, 36, 0.85); /* Dark semi-transparent container */
             border-radius: 15px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-            border: 1px solid #2b2f38;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
+            border: 2px solid #1e7f5c;
         }
+
         h1, h2 {
-            color: #1e7f5c; /* Dark green to reflect military/intelligence vibes */
+            color: #00ffea;
             text-align: center;
         }
+
         h1 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             text-transform: uppercase;
-            letter-spacing: 3px;
-            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            letter-spacing: 4px;
+            text-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
         }
+
         h2 {
             font-size: 1.8rem;
             margin-bottom: 15px;
-            text-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
         }
+
         .project-section {
             margin-bottom: 30px;
             padding: 20px;
-            border: 1px solid #444c56; /* Dark metallic border */
+            border: 1px solid #444c56;
             border-radius: 10px;
-            background-color: #25272d; /* Dark grey section background */
+            background-color: rgba(37, 39, 45, 0.85); /* Transparent section background */
+            box-shadow: 0 8px 24px rgba(0, 255, 234, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
+
+        .project-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 35px rgba(0, 255, 234, 0.5);
+        }
+
         .project-section p {
-            color: #cfd2d6; /* Lighter grey text */
+            color: #cfd2d6;
             line-height: 1.6;
         }
+
         a {
             display: inline-block;
             margin-top: 10px;
-            padding: 10px 25px;
-            color: #1c1e24;
-            background-color: #1e7f5c; /* Dark green button background */
+            padding: 12px 30px;
+            color: #ffffff;
+            background-color: #00ffea;
             text-decoration: none;
             border-radius: 5px;
+            font-weight: bold;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 4px 12px rgba(0, 255, 234, 0.3);
             transition: background-color 0.3s, box-shadow 0.3s;
         }
+
         a:hover {
-            background-color: #4d4d4d;
-            color: #f7f7f7;
-            box-shadow: 0 4px 8px rgba(30, 127, 92, 0.4);
+            background-color: #004e92;
+            box-shadow: 0 6px 16px rgba(0, 78, 146, 0.5);
         }
+
         a:active {
-            background-color: #1e7f5c;
-            color: #f7f7f7;
+            background-color: #00ffea;
+            box-shadow: 0 3px 8px rgba(0, 255, 234, 0.5);
         }
     </style>
 </head>
+
 <body>
     <div class="container">
-        <h1>Ethical Hacking Projects</h1>
+        <h1>Ethical Hacking Simulations</h1>
 
         <div class="project-section">
             <h2>Planting Backdoor on Windows 10 MITM Attack</h2>
@@ -87,7 +113,7 @@
             <p>Hijacking the domain name of a system through a man-in-the-middle attack.</p>
             <a href="https://www.linkedin.com/posts/htet-paing-aung-575468282_ethicalhacking-dnsspoofing-activity-7203796836174704640-5XcE?utm_source=share&utm_medium=member_desktop" target="_blank">Explore the Operation</a>
         </div>
-        
+
         <div class="project-section">
             <h2>Bypassing HTTPS</h2>
             <p>This tutorial provides an in-depth exploration of techniques used to bypass HTTPS encryption, emphasizing man-in-the-middle (MITM) attacks. Learn how attackers intercept secure traffic and how to implement defenses against such vulnerabilities.</p>
@@ -111,13 +137,13 @@
             <p>Building on the initial detection methods, this session delves deeper into advanced ARP spoofing detection strategies. Learn how to improve detection accuracy and enhance network security.</p>
             <a href="https://youtu.be/8cCXiqqW740?si=qpclDvLg7G5kNDYC" target="_blank">Explore the Operation</a>
         </div>
-        
+
         <div class="project-section">
             <h2>ARP Spoofing MITM Attack 1</h2>
             <p>This video introduces the detection of ARP spoofing in the context of man-in-the-middle (MITM) attacks, where attackers intercept communication between two hosts. Understand the risks and protective measures involved.</p>
             <a href="https://youtu.be/o6_0pXCY51k?si=jVwRZS5G4v5FNQ4Q" target="_blank">Explore the Operation</a>
         </div>
-        
+
         <div class="project-section">
             <h2>ARP Spoofing MITM Attack 2</h2>
             <p>A continuation of ARP spoofing detection in MITM scenarios, this video provides a more in-depth look at identifying and mitigating more sophisticated attack vectors on network infrastructure.</p>
@@ -129,19 +155,19 @@
             <p>Effective network monitoring is key to identifying threats in real-time. This project demonstrates how to leverage various network monitoring tools to detect suspicious activity and secure the network against potential breaches.</p>
             <a href="https://youtu.be/sVZsnb1BGCY?si=xNcJbirzPS5PrM2O" target="_blank">Explore the Operation</a>
         </div>
-        
+
         <div class="project-section">
             <h2>Server Recon 1</h2>
             <p>Reconnaissance is the first phase of any penetration test or attack. This tutorial walks through various reconnaissance techniques used to gather information about a target server, paving the way for further exploitation.</p>
             <a href="https://youtu.be/0o44pTGmuxo?si=HIYl__g0ZFGRw38V" target="_blank">Explore the Operation</a>
         </div>
-        
+
         <div class="project-section">
             <h2>Server Recon 2</h2>
             <p>A continuation of the reconnaissance process, this project covers more advanced techniques and tools to acquire critical information about the target system, helping to identify potential vulnerabilities.</p>
             <a href="https://youtu.be/PXn54SNG8lo?si=vAeQTYeoIBf4Oe97" target="_blank">Explore the Operation</a>
         </div>
-        
+
         <div class="project-section">
             <h2>Exploiting Server Vulnerabilities</h2>
             <p>This session covers exploiting server vulnerabilities uncovered during reconnaissance. It demonstrates how attackers can leverage these weaknesses to gain unauthorized access and provides insights into mitigation strategies.</p>
@@ -153,7 +179,7 @@
             <p>This session covers the use of Nmap to discover devices for reconnaissance purposes (red team) and detect malicious devices for blue team defense strategies.</p>
             <a href="https://www.linkedin.com/posts/htet-paing-aung-575468282_ethicalhacking-kalilinux-nmap-activity-7202040670700609537-cgjp?utm_source=share&utm_medium=member_desktop" target="_blank">Explore the Operation</a>
         </div>
-        
+
         <div class="project-section">
             <h2>Wi-Fi Hacking with Kali</h2>
             <p>This session covers the process of hacking routers using a mobile hotspot.</p>
@@ -165,7 +191,7 @@
             <p>This session covers using Flipper Zero to deauthenticate devices for password capturing.</p>
             <a href="https://www.linkedin.com/posts/htet-paing-aung-575468282_wifi-deauth-attack-with-flipper-zero-activity-7200470517001125888-pMIx?utm_source=share&utm_medium=member_desktop" target="_blank">Explore the Operation</a>
         </div>
-        
+
         <div class="project-section">
             <h2>Evil Portal Wi-Fi Attack with Flipper Zero</h2>
             <p>This session covers creating a fake login page for Wi-Fi networks using Flipper Zero to capture login information.</p>
@@ -173,4 +199,5 @@
         </div>
     </div>
 </body>
+
 </html>
