@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>5G and IoT Projects</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
         body {
-            font-family: 'Roboto Mono', monospace;
-            background-color: #0a0f0b;
-            background-image: url('https://www.transparenttextures.com/patterns/circuit-board.png'), linear-gradient(130deg, #0a0f0b, #1f2b20);
+            font-family: 'Orbitron', sans-serif;
+            background-color: #000;
+            background-image: url('https://miro.medium.com/v2/resize:fit:1400/1*8gmgaAkFdI-9OHY5cA93xQ.png'), linear-gradient(130deg, #000000, #1a1a1a);
             background-size: cover, auto;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -21,33 +21,51 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            overflow: hidden;
         }
         .container {
             max-width: 900px;
             margin: 20px;
             padding: 20px;
-            background-color: rgba(10, 15, 11, 0.9);
+            background-color: rgba(0, 0, 0, 0.85);
             border-radius: 15px;
             box-shadow: 0 4px 20px rgba(0, 255, 174, 0.3), 0 6px 50px rgba(0, 120, 255, 0.4);
-            border: 1px solid #00ffae;
+            border: 2px solid #00ffae;
+            position: relative;
+            overflow: hidden;
+        }
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('https://www.transparenttextures.com/patterns/grid-noise.png');
+            opacity: 0.2;
+            z-index: 0;
         }
         h1, h2 {
             color: #00ffae;
             text-align: center;
             text-shadow: 0 0 10px #00ffae, 0 0 20px #00d4ff;
+            position: relative;
+            z-index: 1;
         }
         h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin-bottom: 30px;
         }
         .project-section {
             margin-bottom: 20px;
             padding: 20px;
-            border: 1px solid #00ffae;
+            border: 2px solid #00ffae;
             border-radius: 10px;
-            background-color: #162519;
-            background-image: url('https://www.transparenttextures.com/patterns/circuitry.png');
+            background-color: #111;
+            background-image: url('https://www.transparenttextures.com/patterns/3px-tile.png');
             background-size: contain;
+            position: relative;
+            z-index: 1;
         }
         .project-section h2 {
             text-shadow: 0 0 8px #00d4ff, 0 0 10px #00ffae;
@@ -59,7 +77,7 @@
             display: inline-block;
             margin-top: 15px;
             padding: 10px 20px;
-            color: #ffffff;
+            color: #000;
             background-color: #00ffae;
             text-decoration: none;
             border-radius: 8px;
@@ -76,40 +94,77 @@
             box-shadow: 0 0 20px #00d4ff, 0 0 30px #00ffae;
             transform: scale(1.02);
         }
+        .glitch {
+            font-size: 3rem;
+            position: relative;
+            color: #00ffae;
+            text-shadow: none;
+        }
+        .glitch::before, .glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0.8;
+            z-index: -1;
+        }
+        .glitch::before {
+            color: #00d4ff;
+            left: 2px;
+            top: 2px;
+            clip: rect(0, 900px, 50px, 0);
+            animation: glitch1 2s infinite linear alternate-reverse;
+        }
+        .glitch::after {
+            color: #ff00ff;
+            left: -2px;
+            top: -2px;
+            clip: rect(50px, 900px, 100px, 0);
+            animation: glitch2 2s infinite linear alternate-reverse;
+        }
+        @keyframes glitch1 {
+            0% { clip: rect(0, 900px, 50px, 0); }
+            50% { clip: rect(0, 900px, 40px, 0); }
+            100% { clip: rect(0, 900px, 30px, 0); }
+        }
+        @keyframes glitch2 {
+            0% { clip: rect(50px, 900px, 100px, 0); }
+            50% { clip: rect(40px, 900px, 90px, 0); }
+            100% { clip: rect(30px, 900px, 80px, 0); }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>5G and Internet Of Things Projects</h1>
+        <h1 class="glitch" data-text="5G and IoT Projects">5G and IoT Projects</h1>
         
         <div class="project-section">
             <h2>ThunderBirds remote IOT weather station</h2>
             <p>Thunderbirds 2.0 
-            Second Year Group Project brief: Weather station with web interface display and IOT embedded with proxy cloud for remote web access.
-            Applications: researchers who need to monitor and analyze weather conditions without travelling to harsh environments.
-            Members: Simona Ionescu Mandas, Moe, Iiya, Sriharini Sivaraman, Htet Paing Aung 
-            Languages: python, CSS, HTML, JS (full stack), Git
-            Cloud: Proxy cloud 
-            Hardware: Rasberry pi4 model B , DHT11 module 
-            GitHub Link: https://lnkd.in/ej4CC4MZ
+          Parking space counting and free space spotting Python computer vision project.....
+Git Hub link: https://lnkd.in/enJMKU3r
             </p>
-            <a href="https://www.linkedin.com/posts/htet-paing-aung-575468282_thunderbirds-20-second-year-group-project-activity-7189698847386816512-lXUt?utm_source=share&utm_medium=member_desktop" target="_blank">Click Here to Watch</a>
-           <a href="https://www.facebook.com/61557517397657/videos/1179966363172347?locale=en_GB" target="_blank">Click Here to Watch</a>
+            <a href="https://www.linkedin.com/posts/htet-paing-aung-575468282_pythonprogramming-opencv-computervision-activity-7156106075702722560-G8ff?utm_source=share&utm_medium=member_desktop" target="_blank">Click Here to Watch</a>
         </div>
         <div class="project-section">
-            <h2>Basic IOT webcam</h2>
-            <p>Utilizing the web socket, two microprocessors can connect and exchange all types of data through HTTP.</p>
-            <a href="https://www.linkedin.com/posts/htet-paing-aung-575468282_basic-and-simple-iot-webcam-git-hub-activity-7153109498939777025-UehR?utm_source=share&utm_medium=member_desktop" target="_blank">Click Here to Watch</a>
+            <h2>Emotion Detection</h2>
+            <p>Emotion detection open cv and python project....
+            hashtag#pythonprogramming hashtag#computervision hashtag#opencv 
+            GitHub Link: https://lnkd.in/ewsV7Dfb</p>
+            <a href="https://www.linkedin.com/posts/htet-paing-aung-575468282_pythonprogramming-computervision-opencv-activity-7150214794237661185-R5F9?utm_source=share&utm_medium=member_desktop" target="_blank">Click Here to Watch</a>
         </div>
         <div class="project-section">
-            <h2>Security camera IOT with email service</h2>
-            <p>Utilizing the mail service and capturing and sending the image of whatever the PIC motion sensor detects by using Raspberry Pi email transfer protocols.</p>
-            <a href="https://youtu.be/GlarFqmqoOM?si=FBH23tHL62PKTGUG" target="_blank">Click Here to Watch</a>
+            <h2>Yellow color detector</h2>
+            <p>Yellow colour detector with Python and open CV.
+                #pythonprogramming #opencv #computervision</p>
+            <a href="https://www.linkedin.com/posts/htet-paing-aung-575468282_pythonprogramming-opencv-computervision-activity-7150481937629954048-i2Q6?utm_source=share&utm_medium=member_desktop" target="_blank">Click Here to Watch</a>
         </div>
         <div class="project-section">
-            <h2>Smart door remote control with Telegram using Arduino and Raspberry Pi serial connection</h2>
-            <p>By using the Telegram bot, we can remotely control the on-off of the door lock through Raspberry Pi with a serial connection 100% remotely.</p>
-            <a href="https://youtu.be/GlarFqmqoOM?si=FBH23tHL62PKTGUG" target="_blank">Click Here to Watch</a>
+            <h2>Object Detection</h2>
+            <p>Project: Object Detection using OpenCV and YOLO
+                GitHub Repository: https://lnkd.in/eRcsghdY
+            </p>
+            <a href="https://www.linkedin.com/posts/htet-paing-aung-575468282_pythonprogramming-computervision-opencv-activity-7147719446051094528-pqji?utm_source=share&utm_medium=member_desktop" target="_blank">Click Here to Watch</a>
         </div>
     </div>
 </body>
