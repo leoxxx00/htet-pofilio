@@ -12,7 +12,12 @@
       line-height: 1.6;
       margin: 0;
       padding: 0;
-      background: radial-gradient(circle, #0f2027, #203a43, #2c5364); /* Dark gradient background */
+      background: 
+        /* Background image */
+        url('https://platform.vox.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/6312565/shutterstock_154744394.jpg?quality=90&strip=all&crop=0%2C0%2C100%2C100&w=2400') no-repeat center center fixed,
+        /* Radial gradient overlay */
+        radial-gradient(circle, #0f2027, #203a43, #2c5364); 
+      background-size: cover;
       color: #d1e8ff;
       display: flex;
       flex-direction: column;
