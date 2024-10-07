@@ -3,28 +3,43 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Htet Paing Aung</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Orbitron:wght@500&display=swap');
+
     body {
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Roboto Mono', monospace;
       line-height: 1.6;
       margin: 0;
       padding: 0;
-      background-color: black;
+      background-color: #000428;
+      background-image: radial-gradient(circle, #000428, #004e92);
       color: #d1e8ff;
     }
 
     header {
-      background: linear-gradient(90deg, #0d1b2a, #1b263b);
-      color: white;
+      background: linear-gradient(90deg, #050d21, #02163b);
+      color: #00ffea;
       padding: 2rem;
       text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 255, 234, 0.4);
     }
 
     header h1 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 2.5rem;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3rem;
       margin: 0;
+      color: #00ffea;
+      text-shadow: 0 0 15px #00ffea, 0 0 30px #ff00ff;
+    }
+
+    header h2 {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 1.5rem;
+      color: #f4d35e;
+      text-shadow: 0 0 10px #00ffea;
+      margin-top: 0.5rem;
     }
 
     main {
@@ -33,103 +48,124 @@
 
     section {
       margin-bottom: 2rem;
-      background-color: #0d1b2a;
+      background-color: #02163b;
       padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 255, 234, 0.3);
+      border: 1px solid #00ffea;
     }
 
     h2 {
-      color: #1b9aaa;
-      font-family: 'Montserrat', sans-serif;
+      color: #00ffea;
+      font-family: 'Orbitron', sans-serif;
       font-size: 1.75rem;
+      text-shadow: 0 0 10px #00ffea;
     }
 
     h3 {
       color: #f4d35e;
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Orbitron', sans-serif;
       font-size: 1.5rem;
     }
 
     p {
-      font-size: 1rem;
+      font-size: 1.2rem;
       line-height: 1.8;
-      margin-bottom: 1rem;
+      color: #b3d9ff;
     }
 
     a {
-      color: #1b9aaa;
+      color: #00ffea;
       text-decoration: none;
     }
 
     a:hover {
       text-decoration: underline;
+      color: #ff00ff;
     }
 
     nav {
-      background-color: #1b9aaa;
+      background-color: #02163b;
       padding: 1rem;
       text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 255, 234, 0.4);
     }
 
     nav a {
-      color: white;
+      color: #00ffea;
       margin: 0 1rem;
       font-weight: bold;
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Orbitron', sans-serif;
+      text-shadow: 0 0 10px #00ffea;
     }
 
     nav a:hover {
-      color: #f4d35e;
+      color: #ff00ff;
     }
 
     img {
-      border: 2px solid #1b9aaa;
+      border: 2px solid #00ffea;
       border-radius: 8px;
       margin-top: 0.5rem;
+      width: 100%;
+      max-width: 400px;
+      transition: transform 0.3s;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #00ffea, 0 0 30px #ff00ff;
     }
 
     hr {
-      border: 1px solid #1b9aaa;
+      border: 1px solid #00ffea;
+      margin: 2rem 0;
     }
   </style>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Orbitron:wght@500&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <header>
     <h1>Htet Paing Aung</h1>
-    <h2>Artificial Intelligent||Ethical hacking||Machine Learning ||Deep Learning || Computer networking||IOT||Data Scinece||Data Engineering||EmbeddedSystems||||Electronics and Electrical Engineering|| Computer vision||</h2>
+    <h2>Artificial Intelligence || Ethical Hacking || Machine Learning || Deep Learning || IoT || Data Science || Embedded Systems || Computer Vision</h2>
   </header>
+
   <main role="main">
     <section>
       <h2>Personal Intro</h2>
       <p>I am actively involved with leading online platforms like Udemy, Cisco Skill for All, and YouTube. This engagement enables me to delve into state-of-the-art domains, spanning the Internet of Things, cloud computing, CISCO networking, cybersecurity, machine learning, deep learning, computer vision, and Artificial Intelligence for embedded systems and software applications. This active participation empowers me to craft and execute sophisticated software and embedded systems projects. Beyond this, my passion lies in crafting flawless, intelligent, and innovative digital systems using cutting-edge technologies to address challenges across diverse sectors.</p>
     </section>
     <hr />
-       <section>
-      <h3><a href="./public/aiproj.html">Artificial intelligent Model training and deployment</a></h3>
+
+    <section>
+      <h3><a href="./public/aiproj.html">Artificial Intelligent Model Training and Deployment</a></h3>
       <img src="./assets/images/2.png" height="200" alt="AI training and deployment" />
     </section>
+
     <section>
       <h3><a href="./public/ethicalhacking.html">Ethical Hacking Labs</a></h3>
       <img src="./assets/images/X.png" height="200" alt="Ethical Hacking Labs" />
     </section>
+
     <section>
-      <h3><a href="./public/IOT.html">IOT Projects </a></h3>
-      <img src="./assets/images/IOT.png" height="200" alt="Preview of IOT projects" />
+      <h3><a href="./public/IOT.html">IoT Projects</a></h3>
+      <img src="./assets/images/IOT.png" height="200" alt="Preview of IoT projects" />
     </section>
+
     <section>
-      <h3><a href="./public/movie-ranking.html">My IOT projects</a></h3>
-      <img src="./assets/images/0.png" height="200" alt="Preview of movie ranking project" />
+      <h3><a href="./public/movie-ranking.html">My IoT Projects</a></h3>
+      <img src="./assets/images/0.png" height="200" alt="Preview of IoT projects" />
     </section>
+
     <section>
-      <h3><a href="./public/birthday-invite.html">Certificates achieved</a></h3>
-      <img src="./assets/images/1.png" height="200" alt="Preview of birthday invite project" />
+      <h3><a href="./public/birthday-invite.html">Certificates Achieved</a></h3>
+      <img src="./assets/images/1.png" height="200" alt="Certificates Achieved" />
     </section>
- 
+
     <hr />
   </main>
+
   <nav>
     <a href="./public/about.html">About Me</a>
     <a href="./public/contact.html">Contact Me</a>
