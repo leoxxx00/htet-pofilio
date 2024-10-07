@@ -5,83 +5,94 @@
   <meta charset="UTF-8">
   <title>Contact Me - Htet Paing Aung</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
     body {
       font-family: 'Roboto', sans-serif;
       line-height: 1.6;
       margin: 0;
       padding: 0;
-      background-color: #1b263b;
+      background: radial-gradient(circle, #0f2027, #203a43, #2c5364); /* Dark gradient background */
       color: #d1e8ff;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 100vh;
     }
 
     header {
-      background: rgba(13, 27, 42, 0.8);
-      backdrop-filter: blur(10px);
+      background: rgba(13, 27, 42, 0.9);
       color: white;
       padding: 2rem;
       text-align: center;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-      border-bottom: 1px solid #1b263b;
+      box-shadow: 0 8px 15px rgba(0, 255, 255, 0.2);
+      border-bottom: 2px solid #1b9aaa;
     }
 
     header h1 {
       font-family: 'Montserrat', sans-serif;
       font-size: 2.5rem;
+      color: #00ffea;
+      text-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea;
       margin: 0;
     }
 
     main {
       padding: 2rem;
+      flex-grow: 1;
     }
 
     section {
-      margin-bottom: 2rem;
-      background: rgba(13, 27, 42, 0.8);
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-      backdrop-filter: blur(10px);
+      background: rgba(13, 27, 42, 0.9);
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 255, 255, 0.2);
+      border: 1px solid #1b9aaa;
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
     }
 
     h1 {
       color: #1b9aaa;
       font-family: 'Montserrat', sans-serif;
       font-size: 2rem;
-      text-align: center;
+      text-shadow: 0 0 10px #1b9aaa;
     }
 
     p {
-      font-size: 1rem;
+      font-size: 1.1rem;
       line-height: 1.8;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
     }
 
     a {
-      color: #1b9aaa;
+      color: #00ffea;
       text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
     }
 
     a:hover {
-      text-decoration: underline;
+      color: #f4d35e;
     }
 
     nav {
-      background: rgba(13, 27, 42, 0.8);
-      backdrop-filter: blur(10px);
+      background: rgba(13, 27, 42, 0.9);
       padding: 1rem;
       text-align: center;
-      box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
-      border-top: 1px solid #1b263b;
-      position: fixed;
-      width: 100%;
-      bottom: 0;
+      box-shadow: 0 -8px 15px rgba(0, 255, 255, 0.2);
+      border-top: 2px solid #1b9aaa;
     }
 
     nav a {
-      color: #1b9aaa;
+      color: #00ffea;
       margin: 0 1rem;
       font-weight: bold;
       font-family: 'Montserrat', sans-serif;
+      font-size: 1.2rem;
+      text-shadow: 0 0 8px #00ffea;
+      transition: color 0.3s;
     }
 
     nav a:hover {
@@ -98,14 +109,29 @@
     hr {
       border: 1px solid #1b9aaa;
     }
+
+    /* Small screen adjustments */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      h1 {
+        font-size: 1.75rem;
+      }
+
+      nav a {
+        font-size: 1rem;
+      }
+    }
   </style>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <header>
     <h1>Htet Paing Aung</h1>
   </header>
+
   <main>
     <section>
       <h1>Contact Me</h1>
@@ -118,6 +144,7 @@
       </p>
     </section>
   </main>
+
   <nav>
     <a href="./about.html">About Me</a>
     <a href="mailto:resberrypi@gmail.com">Contact Me</a>
