@@ -11,7 +11,10 @@
     body {
       font-family: 'Roboto Mono', monospace;
       background-color: #000428;
-      background-image: radial-gradient(circle at top left, #000428, #004e92);
+      background-image: url('./assets/images/background.jpg'), radial-gradient(circle at top left, #000428, #004e92);
+      background-size: cover, auto;
+      background-position: center, center;
+      background-blend-mode: overlay; /* Ensures the gradient blends with the image */
       margin: 0;
       padding: 0;
       color: #d1e8ff;
