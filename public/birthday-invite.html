@@ -11,7 +11,12 @@
       line-height: 1.6;
       margin: 0;
       padding: 0;
-      background-color: #0d0d0d;
+      /* Adding the background image */
+      background: 
+        url('https://www.embedur.ai/wp-content/uploads/2024/05/Embedded-System-Ecosystem-Copy-870x457.png') no-repeat center center fixed,
+        #0d0d0d; /* Fallback background color */
+      background-size: cover;
+      background-blend-mode: overlay; /* Keeps the dark overlay on the background image */
       color: #e0e0e0;
     }
 
