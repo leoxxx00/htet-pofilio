@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Projects by Htet</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #0b3d91; /* Dark blue background */
-            color: #ffffff; /* White text color */
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* Gradient dark background */
+            color: #ffffff;
             margin: 0;
             padding: 0;
             display: flex;
@@ -16,54 +18,72 @@
             align-items: center;
             min-height: 100vh;
         }
+        
         .container {
             max-width: 900px;
             margin: 20px;
-            padding: 20px;
-            background-color: #1c2a48; /* Slightly lighter dark blue for the container */
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 25px;
+            background-color: rgba(28, 42, 72, 0.9); /* Darker semi-transparent background */
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 255, 255, 0.2);
+            border: 1px solid #00ffea;
         }
-        h1, h2 {
-            color: #e43f5a; /* Highlight heading with a contrasting color */
+
+        h1 {
+            color: #00ffea; /* Neon blue for the main heading */
             text-align: center;
+            font-size: 2.5em;
+            text-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea;
         }
+
         h2 {
-            font-size: 1.5em;
+            color: #82c0ff; /* Softer neon blue for project headings */
+            font-size: 1.8em;
+            text-shadow: 0 0 8px #82c0ff;
+            margin-bottom: 10px;
         }
+
         .project-section {
             margin-bottom: 30px;
-            border: 1px solid #1f4068; /* Darker blue border for sections */
-            padding: 15px;
-            border-radius: 10px;
-            background-color: #24355e; /* Darker background for sections */
+            padding: 20px;
+            background-color: rgba(36, 53, 94, 0.9); /* Slightly darker background for sections */
+            border-radius: 12px;
+            border: 1px solid #1b9aaa;
+            box-shadow: 0 4px 8px rgba(0, 255, 255, 0.2);
         }
+
         .project-section p {
-            color: #c4c4c4; /* Light grey for descriptions */
+            color: #b3d9ff; /* Light grey for descriptions */
             line-height: 1.6;
         }
+
         a {
-            color: #4da8da; /* Light blue for links */
+            color: #00ffea; /* Neon blue for links */
             text-decoration: none;
             transition: color 0.3s;
         }
+
         a:hover {
-            color: #82c0ff;
+            color: #ff00ff; /* Neon pink on hover */
         }
+
         .explore-link {
             display: block;
             text-align: center;
             margin: 20px 0;
-            padding: 10px 20px;
-            border-radius: 5px;
-            background-color: #0b3d91; /* Dark blue background for buttons */
-            color: #ffffff; /* White text color */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s, box-shadow 0.3s;
+            padding: 12px 25px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, #00ffea, #1b9aaa); /* Gradient for buttons */
+            color: #ffffff;
+            font-weight: bold;
+            box-shadow: 0 6px 12px rgba(0, 255, 255, 0.3);
+            transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
         }
+
         .explore-link:hover {
-            background-color: #1f4068;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(135deg, #ff00ff, #1f4068); /* Neon pink gradient on hover */
+            box-shadow: 0 10px 20px rgba(255, 0, 255, 0.4);
+            transform: translateY(-3px);
         }
     </style>
 </head>
@@ -73,18 +93,17 @@
         <div class="project-section">
             <h2>AI for Lung X-ray Analysis</h2>
             <p>
-                This project involves training an AI model to detect COVID-19, Pneumonia, TB and Normal conditions from lung X-ray images. The model uses advanced convolutional neural networks (CNN) and has been trained on a diverse dataset to ensure high accuracy.
+                This project involves training an AI model to detect COVID-19, Pneumonia, TB, and Normal conditions from lung X-ray images. The model uses advanced convolutional neural networks (CNN) and has been trained on a diverse dataset to ensure high accuracy.
             </p>
             <a class="explore-link" href="https://huggingface.co/spaces/resberry/X-vis" target="_blank">Click here to explore more</a>
         </div> 
         <div class="project-section">
-            <h2>Investigate various AI model that can detect ECG signals and classify 5 classes using large ECG PTB XL dataset</h2>
+            <h2>ECG Signal Classification with AI</h2>
             <p>
-                LSTM with the extra layer model architecture is the best among the 5 AI models with 90% f1 accuracy on normal data and 60% to 80% on the other 4 abnormal classes.
+                Investigating various AI models to detect ECG signals and classify 5 classes using the large ECG PTB XL dataset. LSTM with an extra layer model architecture is the best, achieving 90% f1 accuracy on normal data and 60% to 80% on the other 4 abnormal classes.
             </p>
             <a class="explore-link" href="https://github.com/leoxxx00/ECG.git" target="_blank">Click here to explore more</a>
         </div> 
     </div>
-    
 </body>
 </html>
