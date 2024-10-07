@@ -4,26 +4,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Htet Paing Aung</title>
+  <title>Htet Paing Aung - AI & IT Projects</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Orbitron:wght@500&display=swap');
 
     body {
       font-family: 'Roboto Mono', monospace;
-      line-height: 1.6;
+      background-color: #000428;
+      background-image: radial-gradient(circle at top left, #000428, #004e92);
       margin: 0;
       padding: 0;
-      background-color: #000428;
-      background-image: radial-gradient(circle, #000428, #004e92);
       color: #d1e8ff;
     }
 
     header {
-      background: linear-gradient(90deg, #050d21, #02163b);
+      background: linear-gradient(90deg, #0d0d0d, #02163b);
       color: #00ffea;
       padding: 2rem;
       text-align: center;
-      box-shadow: 0 4px 12px rgba(0, 255, 234, 0.4);
+      box-shadow: 0 0 20px rgba(0, 255, 234, 0.7);
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 300%;
+      height: 100%;
+      background: radial-gradient(circle at center, transparent, rgba(0, 255, 234, 0.2));
+      transform: translateX(-50%) rotate(30deg);
+      animation: rotateGlow 6s infinite linear;
+      z-index: 0;
+    }
+
+    @keyframes rotateGlow {
+      from {
+        transform: translateX(-50%) rotate(0deg);
+      }
+      to {
+        transform: translateX(-50%) rotate(360deg);
+      }
     }
 
     header h1 {
@@ -32,6 +55,8 @@
       margin: 0;
       color: #00ffea;
       text-shadow: 0 0 15px #00ffea, 0 0 30px #ff00ff;
+      position: relative;
+      z-index: 1;
     }
 
     header h2 {
@@ -40,6 +65,8 @@
       color: #f4d35e;
       text-shadow: 0 0 10px #00ffea;
       margin-top: 0.5rem;
+      position: relative;
+      z-index: 1;
     }
 
     main {
@@ -51,21 +78,20 @@
       background-color: #02163b;
       padding: 1.5rem;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 255, 234, 0.3);
-      border: 1px solid #00ffea;
+      box-shadow: 0 8px 15px rgba(0, 255, 234, 0.4), 0 0 20px rgba(255, 0, 255, 0.5);
+      border: 2px solid rgba(0, 255, 234, 0.5);
+      transition: transform 0.3s, box-shadow 0.3s;
     }
 
-    h2 {
-      color: #00ffea;
+    section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0, 255, 234, 0.6), 0 0 40px rgba(255, 0, 255, 0.7);
+    }
+
+    h2, h3 {
       font-family: 'Orbitron', sans-serif;
-      font-size: 1.75rem;
       text-shadow: 0 0 10px #00ffea;
-    }
-
-    h3 {
-      color: #f4d35e;
-      font-family: 'Orbitron', sans-serif;
-      font-size: 1.5rem;
+      color: #00ffea;
     }
 
     p {
@@ -80,8 +106,8 @@
     }
 
     a:hover {
-      text-decoration: underline;
       color: #ff00ff;
+      text-decoration: underline;
     }
 
     nav {
@@ -89,6 +115,8 @@
       padding: 1rem;
       text-align: center;
       box-shadow: 0 4px 12px rgba(0, 255, 234, 0.4);
+      border-radius: 10px;
+      margin-top: 2rem;
     }
 
     nav a {
@@ -97,10 +125,15 @@
       font-weight: bold;
       font-family: 'Orbitron', sans-serif;
       text-shadow: 0 0 10px #00ffea;
+      padding: 0.5rem 1rem;
+      background: linear-gradient(90deg, transparent, rgba(0, 255, 234, 0.1));
+      border-radius: 5px;
+      transition: background 0.3s ease, transform 0.3s;
     }
 
     nav a:hover {
-      color: #ff00ff;
+      background: rgba(0, 255, 234, 0.2);
+      transform: translateY(-2px);
     }
 
     img {
@@ -109,12 +142,12 @@
       margin-top: 0.5rem;
       width: 100%;
       max-width: 400px;
-      transition: transform 0.3s;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
 
     img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 15px #00ffea, 0 0 30px #ff00ff;
+      transform: scale(1.1);
+      box-shadow: 0 0 20px #00ffea, 0 0 40px #ff00ff;
     }
 
     hr {
@@ -122,47 +155,43 @@
       margin: 2rem 0;
     }
   </style>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Orbitron:wght@500&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <header>
     <h1>Htet Paing Aung</h1>
-    <h2>A||Artificial Intelligence | Cybersecurity & Ethical Hacking | Machine Learning | Deep Learning | Internet of Things (IoT) | Data Science | Embedded Systems | Computer Vision | Networking & Security || Computer Vision</h2>
+    <h2>AI | Cybersecurity | Ethical Hacking | Machine Learning | IoT | Data Science | Embedded Systems</h2>
   </header>
 
-  <main role="main">
+  <main>
     <section>
       <h2>Personal Intro</h2>
-      <p>As a passionate technologist and innovator, I actively engage with leading platforms such as Udemy, Cisco Skills for All, and YouTube to stay at the forefront of emerging technologies. My expertise spans the Internet of Things (IoT), cloud computing, CISCO networking, cybersecurity, machine learning, deep learning, computer vision, and Artificial Intelligence (AI) for embedded systems. This dynamic involvement allows me to design and implement sophisticated software and embedded systems projects that push the boundaries of technology.
-      With a strong foundation in Python, C++, and Verilog, I am skilled in developing real-time, intelligent solutions using microcontrollers like Arduino, Raspberry Pi, and PIC. My experience extends to ethical hacking, cybersecurity protocols, and networking simulations through Cisco Packet Tracer. I specialize in creating seamless and innovative digital systems that address complex challenges across multiple sectors, from smart home automation to advanced AI-driven healthcare solutions.
-      Driven by a commitment to excellence, I continuously apply my knowledge and skills to deliver cutting-edge solutions that are not only efficient but also transformative. My goal is to engineer flawless, intelligent digital ecosystems that harness the power of AI and embedded systems to drive innovation across diverse industries</p>
+      <p>As a passionate technologist and innovator, I actively engage with platforms like Udemy and Cisco Skills for All to stay at the forefront of emerging technologies. My expertise spans IoT, cloud computing, networking, cybersecurity, machine learning, and AI for embedded systems. With a strong foundation in Python, C++, and Verilog, I specialize in designing smart systems using Arduino, Raspberry Pi, and PIC.</p>
     </section>
-    <hr />
-
+    
     <section>
       <h3><a href="./public/aiproj.html">Artificial Intelligent Model Training and Deployment</a></h3>
-      <img src="./assets/images/2.png" height="200" alt="AI training and deployment" />
+      <img src="./assets/images/2.png" alt="AI training and deployment">
     </section>
 
     <section>
       <h3><a href="./public/ethicalhacking.html">Ethical Hacking Labs</a></h3>
-      <img src="./assets/images/X.png" height="200" alt="Ethical Hacking Labs" />
+      <img src="./assets/images/X.png" alt="Ethical Hacking Labs">
     </section>
 
     <section>
-      <h3><a href="./public/IOT.html">Internet Of Things Projects</a></h3>
-      <img src="./assets/images/IOT.png" height="200" alt="Preview of IoT projects" />
+      <h3><a href="./public/IOT.html">Internet of Things Projects</a></h3>
+      <img src="./assets/images/IOT.png" alt="IoT projects">
     </section>
 
     <section>
-      <h3><a href="./public/movie-ranking.html">My general Projects</a></h3>
-      <img src="./assets/images/0.png" height="200" alt="Preview my general projects" />
+      <h3><a href="./public/movie-ranking.html">General Projects</a></h3>
+      <img src="./assets/images/0.png" alt="General projects">
     </section>
 
     <section>
       <h3><a href="./public/birthday-invite.html">Certificates Achieved</a></h3>
-      <img src="./assets/images/1.png" height="200" alt="Certificates Achieved" />
+      <img src="./assets/images/1.png" alt="Certificates Achieved">
     </section>
 
     <hr />
