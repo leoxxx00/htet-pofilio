@@ -21,6 +21,7 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            perspective: 1000px;
         }
         .container {
             max-width: 900px;
@@ -30,6 +31,11 @@
             border-radius: 15px;
             box-shadow: 0 4px 20px rgba(0, 255, 174, 0.3), 0 6px 50px rgba(0, 120, 255, 0.4);
             border: 1px solid #00ffae;
+            transform: rotateY(10deg);
+            transition: transform 0.5s ease-in-out;
+        }
+        .container:hover {
+            transform: rotateY(0deg) translateZ(10px);
         }
         h1, h2 {
             color: #00ffae;
@@ -39,6 +45,7 @@
         h1 {
             font-size: 2.5rem;
             margin-bottom: 30px;
+            transform: translateZ(20px);
         }
         .project-section {
             margin-bottom: 20px;
@@ -48,12 +55,21 @@
             background-color: #162519;
             background-image: url('https://www.transparenttextures.com/patterns/circuitry.png');
             background-size: contain;
+            box-shadow: 0 4px 10px rgba(0, 255, 174, 0.3), 0 6px 20px rgba(0, 120, 255, 0.4);
+            transform: rotateX(5deg) translateZ(15px);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .project-section:hover {
+            box-shadow: 0 6px 20px #00d4ff, 0 8px 30px #00ffae;
+            transform: rotateX(0deg) translateZ(20px);
         }
         .project-section h2 {
             text-shadow: 0 0 8px #00d4ff, 0 0 10px #00ffae;
+            transform: translateZ(10px);
         }
         .project-section p {
             color: #99d4cc;
+            transform: translateZ(5px);
         }
         a {
             display: inline-block;
@@ -66,34 +82,43 @@
             font-weight: bold;
             transition: all 0.3s ease-in-out;
             box-shadow: 0 0 10px #00ffae, 0 0 20px #00d4ff;
+            transform: translateZ(5px);
         }
         a:hover {
             background-color: #00d4ff;
             box-shadow: 0 0 20px #00d4ff, 0 0 30px #00ffae;
-            transform: translateY(-3px);
-        }
-        .project-section:hover {
-            box-shadow: 0 0 20px #00d4ff, 0 0 30px #00ffae;
-            transform: scale(1.02);
+            transform: translateZ(10px) scale(1.05);
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Embedded Systems Projects Projects</h1>
-        
+        <h1>Embedded Systems Projects</h1>
         <div class="project-section">
-            <h2>FPGA programming</h2>
+            <h2>FPGA programming with Verilog for lock system</h2>
+            <p>
+             The FPGA programming >>> a powerful tool that drive behind AI accellerated chips, Telecoms , defense ,aerospace, space and more. with the shift register for
+            parallel processing acting as on off on off pattern like car engie to accomplish parallel task.
+                
+        
+            </p>
+            <a href="https://www.tiktok.com/@leond797/video/7444102848540839200?is_from_webapp=1&sender_device=pc&web_id=7438144890251036192" target="_blank">Click Here to Watch</a>
+            <a href="https://www.tiktok.com/@leond797/video/7444102848540839200?is_from_webapp=1&sender_device=pc&web_id=7438144890251036192" target="_blank">Click Here to Watch</a>
+            <a href="https://github.com/leoxxx00/VHDLlocksystemparallel.git" target="_blank">GitHub</a>
+        </div>
+        <div class="project-section">
+            <h2>FPGA programming Digital system design</h2>
             <p>
             I have often wondered how microprocessors and silicon chips are designed until I came across this interesting digital design subject. It's fantastic to have a chance to be taught how the brain of every modern technology is designed with Quartus and Verilog.
-            Git Hub link:https://lnkd.in/dib7aAFv
+            
             </p>
+               <a href="https://github.com/leoxxx00/ID-generator-with-BCD-and-Parity.git" target="_blank">GitHub</a>
             <a href="https://www.linkedin.com/posts/htet-paing-aung-575468282_bruneluniversity-verilog-digitaldesign-activity-7150478954473193472--RSn?utm_source=share&utm_medium=member_desktop" target="_blank">Click Here to Watch</a>
         </div>
         <div class="project-section">
             <h2>Simple traffic light 🚥</h2>
-            <p>C++ OOP coding on simple traffic light system...Simple traffic light 🚥 system …
-Git Hub link: https://lnkd.in/eXHzZSWe</p>
+            <p>C++ OOP coding on simple traffic light system...Simple traffic light 🚥 system … </p>
+            <a href="https://lnkd.in/eXHzZSWe" target="_blank">GitHub</a>
             <a href="https://www.linkedin.com/posts/htet-paing-aung-575468282_simple-traffic-light-system-git-hub-activity-7098551514339663873-OZA2?utm_source=share&utm_medium=member_desktop" target="_blank">Click Here to Watch</a>
         </div>
         <div class="project-section">
@@ -104,6 +129,7 @@ Git Hub link: https://lnkd.in/eXHzZSWe</p>
             Sensors: Ultrasonic sensor, PIR motion sensor
             Actuators : Servo motor, LCD and LED.
             GitHub-https://lnkd.in/ediftwmp</p>
+            <a href="https://lnkd.in/ediftwmp" target="_blank">GitHub</a>
             <a href="https://www.linkedin.com/posts/htet-paing-aung-575468282_project-smart-bin-that-can-open-on-approach-activity-7082022419137196032-q3qm?utm_source=share&utm_medium=member_desktop" target="_blank">Click Here to Watch</a>
         </div>
 
@@ -111,13 +137,13 @@ Git Hub link: https://lnkd.in/eXHzZSWe</p>
             <h2>Assembely Language programming</h2>
             <p>
             Assembly programming with PIC microcontroller 💻 . After I completed the exercises in this coursework, my programming and coding ability was further improved. Now, I can not only code but also see how the computer architecture and the coding in binary will interact. 
-            Github link:https://lnkd.in/ekeHQQ8t
             </p>
             <a href="https://www.linkedin.com/posts/htet-paing-aung-575468282_embeddedsystems-embeddedsoftware-assembly-activity-7130975642979840000-QoER?utm_source=share&utm_medium=member_desktop" target="_blank">Click Here to Watch</a>
         </div>
         <div class="project-section">
             <h2>Card reader with arduino</h2>
             <p>Reading and Writing system of a card system</p>
+            <a href="https://lnkd.in/ekeHQQ8t" target="_blank">GitHub</a>
             <a href="https://www.linkedin.com/posts/htet-paing-aung-575468282_how-does-the-card-reader-work-activity-7088581698396790785-KdEa?utm_source=share&utm_medium=member_desktop" target="_blank">Click Here to Watch</a>
         </div>
     </div>
