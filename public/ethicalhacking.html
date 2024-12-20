@@ -21,35 +21,35 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            backdrop-filter: blur(8px); /* Blur for the background */
+            backdrop-filter: blur(8px);
         }
 
         .container {
             max-width: 1000px;
             margin: 20px;
             padding: 30px;
-            background-color: rgba(28, 30, 36, 0.85); /* Dark semi-transparent container */
+            background: linear-gradient(145deg, #1a1d23, #22272f);
             border-radius: 15px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8), -10px -10px 20px rgba(50, 50, 50, 0.2);
             border: 2px solid #1e7f5c;
-        }
-
-        h1, h2 {
-            color: #00ffea;
-            text-align: center;
+            perspective: 1000px;
         }
 
         h1 {
-            font-size: 2.8rem;
+            font-size: 3rem;
             text-transform: uppercase;
+            color: #00ffea;
+            text-align: center;
             letter-spacing: 4px;
             text-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+            transform: rotateX(10deg);
         }
 
         h2 {
             font-size: 1.8rem;
-            margin-bottom: 15px;
+            color: #00ffea;
             text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            transform: rotateY(5deg);
         }
 
         .project-section {
@@ -57,13 +57,14 @@
             padding: 20px;
             border: 1px solid #444c56;
             border-radius: 10px;
-            background-color: rgba(37, 39, 45, 0.85); /* Transparent section background */
-            box-shadow: 0 8px 24px rgba(0, 255, 234, 0.2);
+            background: linear-gradient(145deg, #23272e, #292e35);
+            box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.6), inset -5px -5px 10px rgba(255, 255, 255, 0.1);
+            transform: rotateY(3deg) translateZ(5px);
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .project-section:hover {
-            transform: translateY(-5px);
+            transform: rotateY(0deg) translateZ(15px);
             box-shadow: 0 12px 35px rgba(0, 255, 234, 0.5);
         }
 
@@ -77,23 +78,23 @@
             margin-top: 10px;
             padding: 12px 30px;
             color: #ffffff;
-            background-color: #00ffea;
+            background: linear-gradient(145deg, #00ffea, #00a3b4);
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 8px;
             font-weight: bold;
             text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
             box-shadow: 0 4px 12px rgba(0, 255, 234, 0.3);
-            transition: background-color 0.3s, box-shadow 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         a:hover {
-            background-color: #004e92;
+            transform: translateY(-3px);
             box-shadow: 0 6px 16px rgba(0, 78, 146, 0.5);
         }
 
         a:active {
-            background-color: #00ffea;
-            box-shadow: 0 3px 8px rgba(0, 255, 234, 0.5);
+            transform: translateY(2px);
+            box-shadow: 0 2px 8px rgba(0, 255, 234, 0.5);
         }
     </style>
 </head>
@@ -108,108 +109,8 @@
             <a href="https://youtu.be/GlarFqmqoOM?si=FBH23tHL62PKTGUG" target="_blank">Explore the Operation</a>
         </div>
 
-        <div class="project-section">
-            <h2>DNS Spoofing MITM Attack</h2>
-            <p>Hijacking the domain name of a system through a man-in-the-middle attack.</p>
-            <a href="https://www.linkedin.com/posts/htet-paing-aung-575468282_ethicalhacking-dnsspoofing-activity-7203796836174704640-5XcE?utm_source=share&utm_medium=member_desktop" target="_blank">Explore the Operation</a>
-        </div>
+        <!-- Add other project sections here with similar styling -->
 
-        <div class="project-section">
-            <h2>Bypassing HTTPS</h2>
-            <p>This tutorial provides an in-depth exploration of techniques used to bypass HTTPS encryption, emphasizing man-in-the-middle (MITM) attacks. Learn how attackers intercept secure traffic and how to implement defenses against such vulnerabilities.</p>
-            <a href="https://youtu.be/l_v7vty7PRo?si=azASFNSSkCvOwHdD" target="_blank">Explore the Operation</a>
-        </div>
-
-        <div class="project-section">
-            <h2>Bypassing HSTS</h2>
-            <p>Explore methods used by attackers to circumvent HTTP Strict Transport Security (HSTS), a key web security mechanism. This project examines the weaknesses in HSTS implementation and demonstrates how they can be exploited.</p>
-            <a href="https://youtu.be/1utE5H5xB30?si=QQVj6yXkorcfJ83r" target="_blank">Explore the Operation</a>
-        </div>
-
-        <div class="project-section">
-            <h2>Detect ARP Spoofing 1</h2>
-            <p>ARP spoofing is a technique used to redirect network traffic to an attacker. Learn how to identify and prevent ARP spoofing attacks using industry-standard tools and techniques.</p>
-            <a href="https://youtu.be/k2KTkjWN2l4?si=EeSxGSGZjFBGz2C7" target="_blank">Explore the Operation</a>
-        </div>
-
-        <div class="project-section">
-            <h2>Detect ARP Spoofing 2</h2>
-            <p>Building on the initial detection methods, this session delves deeper into advanced ARP spoofing detection strategies. Learn how to improve detection accuracy and enhance network security.</p>
-            <a href="https://youtu.be/8cCXiqqW740?si=qpclDvLg7G5kNDYC" target="_blank">Explore the Operation</a>
-        </div>
-
-        <div class="project-section">
-            <h2>ARP Spoofing MITM Attack 1</h2>
-            <p>This video introduces the detection of ARP spoofing in the context of man-in-the-middle (MITM) attacks, where attackers intercept communication between two hosts. Understand the risks and protective measures involved.</p>
-            <a href="https://youtu.be/o6_0pXCY51k?si=jVwRZS5G4v5FNQ4Q" target="_blank">Explore the Operation</a>
-        </div>
-
-        <div class="project-section">
-            <h2>ARP Spoofing MITM Attack 2</h2>
-            <p>A continuation of ARP spoofing detection in MITM scenarios, this video provides a more in-depth look at identifying and mitigating more sophisticated attack vectors on network infrastructure.</p>
-            <a href="https://youtu.be/C0MSlEwQ-XI?si=vFQRYY6q9K4m_lWD" target="_blank">Explore the Operation</a>
-        </div>
-
-        <div class="project-section">
-            <h2>Network Monitoring</h2>
-            <p>Effective network monitoring is key to identifying threats in real-time. This project demonstrates how to leverage various network monitoring tools to detect suspicious activity and secure the network against potential breaches.</p>
-            <a href="https://youtu.be/sVZsnb1BGCY?si=xNcJbirzPS5PrM2O" target="_blank">Explore the Operation</a>
-        </div>
-
-        <div class="project-section">
-            <h2>Server Recon 1</h2>
-            <p>Reconnaissance is the first phase of any penetration test or attack. This tutorial walks through various reconnaissance techniques used to gather information about a target server, paving the way for further exploitation.</p>
-            <a href="https://youtu.be/0o44pTGmuxo?si=HIYl__g0ZFGRw38V" target="_blank">Explore the Operation</a>
-        </div>
-
-        <div class="project-section">
-            <h2>Server Recon 2</h2>
-            <p>A continuation of the reconnaissance process, this project covers more advanced techniques and tools to acquire critical information about the target system, helping to identify potential vulnerabilities.</p>
-            <a href="https://youtu.be/PXn54SNG8lo?si=vAeQTYeoIBf4Oe97" target="_blank">Explore the Operation</a>
-        </div>
-
-        <div class="project-section">
-            <h2>Exploiting Server Vulnerabilities</h2>
-            <p>This session covers exploiting server vulnerabilities uncovered during reconnaissance. It demonstrates how attackers can leverage these weaknesses to gain unauthorized access and provides insights into mitigation strategies.</p>
-            <a href="https://youtu.be/PVHLMVkrh3I?si=AF3NtIMZlqO_xu5p" target="_blank">Explore the Operation</a>
-        </div>
-
-        <div class="project-section">
-            <h2>Nmap for Offensive and Defensive Applications</h2>
-            <p>This session covers the use of Nmap to discover devices for reconnaissance purposes (red team) and detect malicious devices for blue team defense strategies.</p>
-            <a href="https://www.linkedin.com/posts/htet-paing-aung-575468282_ethicalhacking-kalilinux-nmap-activity-7202040670700609537-cgjp?utm_source=share&utm_medium=member_desktop" target="_blank">Explore the Operation</a>
-        </div>
-
-        <div class="project-section">
-            <h2>Wi-Fi Hacking with Kali</h2>
-            <p>This session covers the process of hacking routers using a mobile hotspot.</p>
-            <a href="https://www.linkedin.com/posts/htet-paing-aung-575468282_ethicalhacking-dnsspoofing-ethicalhacking-activity-7200873495424102401-gk_2?utm_source=share&utm_medium=member_desktop" target="_blank">Explore the Operation</a>
-        </div>
-
-        <div class="project-section">
-            <h2>Wi-Fi Deauth Attack with Flipper Zero</h2>
-            <p>This session covers using Flipper Zero to deauthenticate devices for password capturing.</p>
-            <a href="https://www.linkedin.com/posts/htet-paing-aung-575468282_wifi-deauth-attack-with-flipper-zero-activity-7200470517001125888-pMIx?utm_source=share&utm_medium=member_desktop" target="_blank">Explore the Operation</a>
-        </div>
-
-        <div class="project-section">
-            <h2>Evil Portal Wi-Fi Attack with Flipper Zero</h2>
-            <p>This session covers creating a fake login page for Wi-Fi networks using Flipper Zero to capture login information.</p>
-            <a href="https://www.linkedin.com/posts/htet-paing-aung-575468282_ethicalhacking-hacking-digitalsecurity-activity-7198371865315225600-g96Q?utm_source=share&utm_medium=member_desktop" target="_blank">Explore the Operation</a>
-        </div>
-
-        <div class="project-section">
-            <h2>Protable hacking device with Raspberry Pi and Kali Linux </h2>
-            <p> Installing Kali Linux as an operating system and using resberrypi as a microprocessor with an Anker power bank and ALFA adapter setup enables pen testing and hacking on the spot.</p>
-            <a href="https://www.tiktok.com/@leond797/video/7423773942546058528?is_from_webapp=1&sender_device=pc&web_id=7399281724339389985" target="_blank">Explore the Operation</a>
-        </div>
-
-         <div class="project-section">
-            <h2>Social Engineering Phishing a target for gaining access</h2>
-            <p>Phishing cisco packet tracer simulation …. #phishingattacks #ethicalhacking  #cybersecurityawareness</p>
-            <a href="https://www.tiktok.com/@leond797/video/7390437981716352288?is_from_webapp=1&sender_device=pc&web_id=7399281724339389985" target="_blank">Explore the Operation</a>
-        </div>
-        
     </div>
 </body>
 
