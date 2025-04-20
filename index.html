@@ -18,17 +18,15 @@
       overflow-x: hidden;
     }
 
-    /* === BACKGROUND CUBE === */
+    /* === MULTIPLE BACKGROUND CUBES === */
     .background-cube-container {
       position: fixed;
-      top: 50%;
-      left: 50%;
       width: 600px;
       height: 600px;
-      transform: translate(-50%, -50%);
-      z-index: 0;
+      transform-style: preserve-3d;
       pointer-events: none;
       opacity: 0.08;
+      z-index: 0;
     }
 
     .background-cube {
@@ -66,6 +64,34 @@
     @keyframes rotateBgCube {
       from { transform: rotateX(0deg) rotateY(0deg); }
       to { transform: rotateX(360deg) rotateY(360deg); }
+    }
+
+    /* Position and scale for each cube */
+    .cube1 {
+      top: 40%;
+      left: 30%;
+      transform: translate(-50%, -50%) scale(0.8);
+    }
+
+    .cube2 {
+      top: 60%;
+      left: 70%;
+      transform: translate(-50%, -50%) scale(0.6);
+    }
+
+    .cube3 {
+      top: 20%;
+      left: 80%;
+      transform: translate(-50%, -50%) scale(0.5);
+    }
+
+    /* Different animation durations */
+    .cube2 .background-cube {
+      animation-duration: 90s;
+    }
+
+    .cube3 .background-cube {
+      animation-duration: 120s;
     }
 
     header {
@@ -219,8 +245,28 @@
 </head>
 
 <body>
-  <!-- 3D Background Cube -->
-  <div class="background-cube-container">
+  <!-- Multiple Background Cubes -->
+  <div class="background-cube-container cube1">
+    <div class="background-cube">
+      <div class="face front">AI</div>
+      <div class="face back">IoT</div>
+      <div class="face right">CV</div>
+      <div class="face left">FPGA</div>
+      <div class="face top">Cyber</div>
+      <div class="face bottom">ML</div>
+    </div>
+  </div>
+  <div class="background-cube-container cube2">
+    <div class="background-cube">
+      <div class="face front">AI</div>
+      <div class="face back">IoT</div>
+      <div class="face right">CV</div>
+      <div class="face left">FPGA</div>
+      <div class="face top">Cyber</div>
+      <div class="face bottom">ML</div>
+    </div>
+  </div>
+  <div class="background-cube-container cube3">
     <div class="background-cube">
       <div class="face front">AI</div>
       <div class="face back">IoT</div>
