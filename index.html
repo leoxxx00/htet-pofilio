@@ -15,6 +15,57 @@
       padding: 0;
       color: #ffffff;
       perspective: 1000px;
+      overflow-x: hidden;
+    }
+
+    /* === BACKGROUND CUBE === */
+    .background-cube-container {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: 600px;
+      height: 600px;
+      transform: translate(-50%, -50%);
+      z-index: 0;
+      pointer-events: none;
+      opacity: 0.08;
+    }
+
+    .background-cube {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      animation: rotateBgCube 60s infinite linear;
+    }
+
+    .background-cube .face {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3rem;
+      background: rgba(0, 255, 234, 0.1);
+      border: 2px solid #00ffe0;
+      color: #ffffff;
+      text-shadow: 0 0 15px #00ffe0;
+      box-shadow: inset 0 0 60px rgba(0, 255, 234, 0.3);
+      backdrop-filter: blur(2px);
+    }
+
+    .background-cube .front { transform: rotateY(0deg) translateZ(300px); }
+    .background-cube .back { transform: rotateY(180deg) translateZ(300px); }
+    .background-cube .right { transform: rotateY(90deg) translateZ(300px); }
+    .background-cube .left { transform: rotateY(-90deg) translateZ(300px); }
+    .background-cube .top { transform: rotateX(90deg) translateZ(300px); }
+    .background-cube .bottom { transform: rotateX(-90deg) translateZ(300px); }
+
+    @keyframes rotateBgCube {
+      from { transform: rotateX(0deg) rotateY(0deg); }
+      to { transform: rotateX(360deg) rotateY(360deg); }
     }
 
     header {
@@ -26,6 +77,8 @@
       text-align: center;
       max-width: 80%;
       box-shadow: 0px 4px 30px rgba(0, 255, 255, 0.8);
+      z-index: 1;
+      position: relative;
     }
 
     header h1 {
@@ -37,12 +90,8 @@
     }
 
     @keyframes glow {
-      from {
-        text-shadow: 0 0 30px #00ffe0, 0 0 60px #ff00ff;
-      }
-      to {
-        text-shadow: 0 0 50px #00ffe0, 0 0 80px #ff00ff;
-      }
+      from { text-shadow: 0 0 30px #00ffe0, 0 0 60px #ff00ff; }
+      to { text-shadow: 0 0 50px #00ffe0, 0 0 80px #ff00ff; }
     }
 
     header h2 {
@@ -59,6 +108,8 @@
       max-width: 1200px;
       margin: 2rem auto;
       padding: 0 1rem;
+      position: relative;
+      z-index: 1;
     }
 
     section {
@@ -140,6 +191,8 @@
       text-align: center;
       border-radius: 20px;
       box-shadow: 0px 4px 30px rgba(0, 255, 255, 0.8);
+      position: relative;
+      z-index: 1;
     }
 
     nav a {
@@ -162,58 +215,23 @@
       border: 1px solid rgba(0, 255, 234, 0.5);
       margin: 2rem 0;
     }
-
-    /* 3D Cube */
-    .cube-container {
-      width: 200px;
-      height: 200px;
-      margin: 3rem auto;
-      perspective: 1000px;
-    }
-
-    .cube {
-      width: 100%;
-      height: 100%;
-      position: relative;
-      transform-style: preserve-3d;
-      animation: spin 10s infinite linear;
-    }
-
-    .face {
-      position: absolute;
-      width: 200px;
-      height: 200px;
-      background: rgba(0, 255, 234, 0.2);
-      border: 2px solid #00ffe0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Orbitron', sans-serif;
-      font-size: 1.5rem;
-      color: #fff;
-      text-shadow: 0 0 10px #ff00ff;
-      box-shadow: inset 0 0 30px rgba(0, 255, 255, 0.5);
-    }
-
-    .front { transform: rotateY(0deg) translateZ(100px); }
-    .back { transform: rotateY(180deg) translateZ(100px); }
-    .right { transform: rotateY(90deg) translateZ(100px); }
-    .left { transform: rotateY(-90deg) translateZ(100px); }
-    .top { transform: rotateX(90deg) translateZ(100px); }
-    .bottom { transform: rotateX(-90deg) translateZ(100px); }
-
-    @keyframes spin {
-      from {
-        transform: rotateX(0deg) rotateY(0deg);
-      }
-      to {
-        transform: rotateX(360deg) rotateY(360deg);
-      }
-    }
   </style>
 </head>
 
 <body>
+  <!-- 3D Background Cube -->
+  <div class="background-cube-container">
+    <div class="background-cube">
+      <div class="face front">AI</div>
+      <div class="face back">IoT</div>
+      <div class="face right">CV</div>
+      <div class="face left">FPGA</div>
+      <div class="face top">Cyber</div>
+      <div class="face bottom">ML</div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
   <header>
     <h1>Htet Paing Aung</h1>
     <h2>||AI | Cybersecurity | Ethical Hacking | Machine Learning|Deep Learning|FPGA| IoT | Data Science | Embedded Systems||</h2>
@@ -223,58 +241,38 @@
     </section>
   </header>
 
-  <!-- 🔲 3D Cube Starts Here -->
-  <div class="cube-container">
-    <div class="cube">
-      <div class="face front">AI</div>
-      <div class="face back">IoT</div>
-      <div class="face right">CV</div>
-      <div class="face left">FPGA</div>
-      <div class="face top">Cyber</div>
-      <div class="face bottom">ML</div>
-    </div>
-  </div>
-  <!-- 🔲 3D Cube Ends Here -->
-
   <main>
     <section>
       <h3><a href="./public/aiproj.html">Artificial Intelligent Model Training and Deployment</a></h3>
-      <img src="./assets/images/2.png" alt="AI training and deployment">
+      <img src="./assets/images/2.png" alt="AI training and deployment" />
     </section>
-
     <section>
       <h3><a href="./public/ethicalhacking.html">Ethical Hacking Labs</a></h3>
-      <img src="./assets/images/X.png" alt="Ethical Hacking Labs">
+      <img src="./assets/images/X.png" alt="Ethical Hacking Labs" />
     </section>
-
     <section>
       <h3><a href="./public/IOT.html">Internet of Things Projects</a></h3>
-      <img src="./assets/images/IOT.png" alt="IoT projects">
+      <img src="./assets/images/IOT.png" alt="IoT projects" />
     </section>
-
     <section>
       <h3><a href="./public/CV.html">Machine Vision Projects</a></h3>
-      <img src="./assets/images/CV.png" alt="Computer Vision projects">
+      <img src="./assets/images/CV.png" alt="Computer Vision projects" />
     </section>
-
     <section>
       <h3><a href="./public/embedded.html">Embedded Systems Projects</a></h3>
-      <img src="./assets/images/embedded.png" alt="Embedded Systems projects">
+      <img src="./assets/images/embedded.png" alt="Embedded Systems projects" />
     </section>
-
     <section>
       <h3><a href="./public/softwares.html">Softwares/Apps with GUI projects</a></h3>
-      <img src="./assets/images/softwares.png" alt="GUI APPS projects">
+      <img src="./assets/images/softwares.png" alt="GUI APPS projects" />
     </section>
-
     <section>
       <h3><a href="./public/movie-ranking.html">General Projects</a></h3>
-      <img src="./assets/images/0.png" alt="General projects">
+      <img src="./assets/images/0.png" alt="General projects" />
     </section>
-
     <section>
       <h3><a href="./public/birthday-invite.html">Certificates Achieved</a></h3>
-      <img src="./assets/images/1.png" alt="Certificates Achieved">
+      <img src="./assets/images/1.png" alt="Certificates Achieved" />
     </section>
   </main>
 
