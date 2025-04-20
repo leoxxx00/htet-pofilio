@@ -28,8 +28,7 @@
       transform: translate(-50%, -50%);
       z-index: 0;
       pointer-events: none;
-      opacity: 0.2; /* Increased from 0.08 */
-      filter: drop-shadow(0 0 20px #00ffe0);
+      opacity: 0.08;
     }
 
     .background-cube {
@@ -37,7 +36,7 @@
       height: 100%;
       position: relative;
       transform-style: preserve-3d;
-      animation: rotateBgCube 30s infinite linear; /* Faster */
+      animation: rotateBgCube 60s infinite linear;
     }
 
     .background-cube .face {
@@ -49,12 +48,12 @@
       justify-content: center;
       font-family: 'Orbitron', sans-serif;
       font-size: 3rem;
-      background: rgba(0, 255, 234, 0.15); /* More visible */
+      background: rgba(0, 255, 234, 0.1);
       border: 2px solid #00ffe0;
       color: #ffffff;
       text-shadow: 0 0 15px #00ffe0;
-      box-shadow: 0 0 60px rgba(0, 255, 234, 0.6), inset 0 0 40px rgba(255, 0, 255, 0.3);
-      backdrop-filter: blur(3px);
+      box-shadow: inset 0 0 60px rgba(0, 255, 234, 0.3);
+      backdrop-filter: blur(2px);
     }
 
     .background-cube .front { transform: rotateY(0deg) translateZ(300px); }
@@ -69,8 +68,153 @@
       to { transform: rotateX(360deg) rotateY(360deg); }
     }
 
-    /* Rest of your styling remains unchanged below (header, main, nav, etc.) */
-    /* ... keep everything else unchanged ... */
+    header {
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(15px);
+      border-radius: 20px;
+      margin: 2rem auto;
+      padding: 3rem;
+      text-align: center;
+      max-width: 80%;
+      box-shadow: 0px 4px 30px rgba(0, 255, 255, 0.8);
+      z-index: 1;
+      position: relative;
+    }
+
+    header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3.5rem;
+      color: #00ffe0;
+      text-shadow: 0 0 30px #00ffe0, 0 0 60px #ff00ff;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 30px #00ffe0, 0 0 60px #ff00ff; }
+      to { text-shadow: 0 0 50px #00ffe0, 0 0 80px #ff00ff; }
+    }
+
+    header h2 {
+      font-size: 1.8rem;
+      color: #f4d35e;
+      margin-top: 0.5rem;
+      letter-spacing: 2px;
+    }
+
+    main {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    section {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.4), 0px 10px 30px rgba(0, 255, 234, 0.7);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      overflow: hidden;
+      position: relative;
+    }
+
+    section:hover {
+      transform: translateY(-15px) scale(1.05);
+      box-shadow: 0 15px 40px rgba(0, 255, 234, 0.8), 0 0 60px rgba(255, 0, 255, 0.9);
+    }
+
+    section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, rgba(0, 255, 234, 0.2), rgba(255, 0, 255, 0.2));
+      opacity: 0.2;
+      z-index: 0;
+    }
+
+    section h3 {
+      font-family: 'Orbitron', sans-serif;
+      text-shadow: 0 0 15px #00ffe0;
+      color: #00ffe0;
+      position: relative;
+      z-index: 1;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: #b3d9ff;
+      position: relative;
+      z-index: 1;
+    }
+
+    a {
+      color: #00ffe0;
+      text-decoration: none;
+      font-weight: bold;
+      position: relative;
+      z-index: 1;
+    }
+
+    a:hover {
+      color: #ff00ff;
+      text-decoration: underline;
+    }
+
+    img {
+      border: 2px solid #00ffe0;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 300px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    img:hover {
+      transform: rotateY(10deg) scale(1.1);
+      box-shadow: 0 0 30px #00ffe0, 0 0 60px #ff00ff;
+    }
+
+    nav {
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(15px);
+      padding: 1.5rem;
+      margin: 3rem auto;
+      text-align: center;
+      border-radius: 20px;
+      box-shadow: 0px 4px 30px rgba(0, 255, 255, 0.8);
+      position: relative;
+      z-index: 1;
+    }
+
+    nav a {
+      color: #00ffe0;
+      margin: 0 1.5rem;
+      font-family: 'Orbitron', sans-serif;
+      text-shadow: 0 0 15px #00ffe0;
+      padding: 0.7rem 1.5rem;
+      background: linear-gradient(145deg, rgba(0, 255, 234, 0.3), transparent);
+      border-radius: 8px;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    nav a:hover {
+      background: rgba(0, 255, 234, 0.5);
+      transform: translateY(-5px);
+    }
+
+    hr {
+      border: 1px solid rgba(0, 255, 234, 0.5);
+      margin: 2rem 0;
+    }
   </style>
 </head>
 
@@ -87,8 +231,55 @@
     </div>
   </div>
 
-  <!-- Your original content starts here (header, sections, nav) -->
-  <!-- unchanged from your current code -->
+  <!-- Main Content -->
+  <header>
+    <h1>Htet Paing Aung</h1>
+    <h2>||AI | Cybersecurity | Ethical Hacking | Machine Learning|Deep Learning|FPGA| IoT | Data Science | Embedded Systems||</h2>
+    <section>
+      <h3>Personal brief</h3>
+      <p>As a passionate technologist and engineer, I actively engage with platforms like Udemy and Cisco Skills for All to stay at the forefront of emerging technologies. My expertise spans IoT, cloud computing, networking, cybersecurity, machine learning, and AI for embedded systems. With a strong foundation in Python, C++, and Verilog, I specialize in designing smart systems using Arduino, Raspberry Pi, and PIC.</p>
+    </section>
+  </header>
+
+  <main>
+    <section>
+      <h3><a href="./public/aiproj.html">Artificial Intelligent Model Training and Deployment</a></h3>
+      <img src="./assets/images/2.png" alt="AI training and deployment" />
+    </section>
+    <section>
+      <h3><a href="./public/ethicalhacking.html">Ethical Hacking Labs</a></h3>
+      <img src="./assets/images/X.png" alt="Ethical Hacking Labs" />
+    </section>
+    <section>
+      <h3><a href="./public/IOT.html">Internet of Things Projects</a></h3>
+      <img src="./assets/images/IOT.png" alt="IoT projects" />
+    </section>
+    <section>
+      <h3><a href="./public/CV.html">Machine Vision Projects</a></h3>
+      <img src="./assets/images/CV.png" alt="Computer Vision projects" />
+    </section>
+    <section>
+      <h3><a href="./public/embedded.html">Embedded Systems Projects</a></h3>
+      <img src="./assets/images/embedded.png" alt="Embedded Systems projects" />
+    </section>
+    <section>
+      <h3><a href="./public/softwares.html">Softwares/Apps with GUI projects</a></h3>
+      <img src="./assets/images/softwares.png" alt="GUI APPS projects" />
+    </section>
+    <section>
+      <h3><a href="./public/movie-ranking.html">General Projects</a></h3>
+      <img src="./assets/images/0.png" alt="General projects" />
+    </section>
+    <section>
+      <h3><a href="./public/birthday-invite.html">Certificates Achieved</a></h3>
+      <img src="./assets/images/1.png" alt="Certificates Achieved" />
+    </section>
+  </main>
+
+  <nav>
+    <a href="./public/about.html">About Me</a>
+    <a href="./public/contact.html">Contact Me</a>
+  </nav>
 </body>
 
 </html>
