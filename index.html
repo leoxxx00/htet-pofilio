@@ -18,14 +18,14 @@
       overflow-x: hidden;
     }
 
-    /* === MULTIPLE SMALLER BACKGROUND CUBES === */
+    /* === MULTIPLE BACKGROUND CUBES === */
     .background-cube-container {
       position: fixed;
-      width: 300px; /* Reduced size */
-      height: 300px; /* Reduced size */
+      width: 600px;
+      height: 600px;
       transform-style: preserve-3d;
       pointer-events: none;
-      opacity: 0.1;
+      opacity: 0.08;
       z-index: 0;
     }
 
@@ -39,13 +39,13 @@
 
     .background-cube .face {
       position: absolute;
-      width: 300px; /* Reduced size */
-      height: 300px; /* Reduced size */
+      width: 600px;
+      height: 600px;
       display: flex;
       align-items: center;
       justify-content: center;
       font-family: 'Orbitron', sans-serif;
-      font-size: 2rem; /* Adjusted font size */
+      font-size: 3rem;
       background: rgba(0, 255, 234, 0.1);
       border: 2px solid #00ffe0;
       color: #ffffff;
@@ -54,12 +54,12 @@
       backdrop-filter: blur(2px);
     }
 
-    .background-cube .front { transform: rotateY(0deg) translateZ(150px); }
-    .background-cube .back { transform: rotateY(180deg) translateZ(150px); }
-    .background-cube .right { transform: rotateY(90deg) translateZ(150px); }
-    .background-cube .left { transform: rotateY(-90deg) translateZ(150px); }
-    .background-cube .top { transform: rotateX(90deg) translateZ(150px); }
-    .background-cube .bottom { transform: rotateX(-90deg) translateZ(150px); }
+    .background-cube .front { transform: rotateY(0deg) translateZ(300px); }
+    .background-cube .back { transform: rotateY(180deg) translateZ(300px); }
+    .background-cube .right { transform: rotateY(90deg) translateZ(300px); }
+    .background-cube .left { transform: rotateY(-90deg) translateZ(300px); }
+    .background-cube .top { transform: rotateX(90deg) translateZ(300px); }
+    .background-cube .bottom { transform: rotateX(-90deg) translateZ(300px); }
 
     @keyframes rotateBgCube {
       from { transform: rotateX(0deg) rotateY(0deg); }
@@ -68,42 +68,52 @@
 
     /* Position and scale for each cube */
     .cube1 {
-      top: 30%;
-      left: 20%;
-      transform: translate(-50%, -50%) scale(0.7);
+      top: 40%;
+      left: 30%;
+      transform: translate(-50%, -50%) scale(0.8);
     }
 
     .cube2 {
-      top: 40%;
-      left: 50%;
+      top: 60%;
+      left: 70%;
       transform: translate(-50%, -50%) scale(0.6);
     }
 
     .cube3 {
-      top: 50%;
+      top: 20%;
       left: 80%;
       transform: translate(-50%, -50%) scale(0.5);
     }
 
     .cube4 {
-      top: 20%;
-      left: 70%;
-      transform: translate(-50%, -50%) scale(0.6);
+      top: 15%;
+      left: 40%;
+      transform: translate(-50%, -50%) scale(0.7);
     }
 
     .cube5 {
-      top: 10%;
-      left: 80%;
+      top: 75%;
+      left: 20%;
       transform: translate(-50%, -50%) scale(0.5);
     }
 
     .cube6 {
-      top: 60%;
-      left: 30%;
-      transform: translate(-50%, -50%) scale(0.7);
+      top: 30%;
+      left: 85%;
+      transform: translate(-50%, -50%) scale(0.6);
     }
 
-    /* Different animation durations */
+    .cube7 {
+      top: 50%;
+      left: 60%;
+      transform: translate(-50%, -50%) scale(0.8);
+    }
+
+    /* Different animation durations for each cube */
+    .cube1 .background-cube {
+      animation-duration: 60s;
+    }
+
     .cube2 .background-cube {
       animation-duration: 90s;
     }
@@ -113,15 +123,19 @@
     }
 
     .cube4 .background-cube {
-      animation-duration: 80s;
+      animation-duration: 110s;
     }
 
     .cube5 .background-cube {
-      animation-duration: 150s;
+      animation-duration: 100s;
     }
 
     .cube6 .background-cube {
-      animation-duration: 200s;
+      animation-duration: 130s;
+    }
+
+    .cube7 .background-cube {
+      animation-duration: 140s;
     }
 
     header {
@@ -275,7 +289,7 @@
 </head>
 
 <body>
-  <!-- Multiple Smaller Background Cubes -->
+  <!-- Multiple Background Cubes -->
   <div class="background-cube-container cube1">
     <div class="background-cube">
       <div class="face front">AI</div>
@@ -286,19 +300,7 @@
       <div class="face bottom">ML</div>
     </div>
   </div>
-
   <div class="background-cube-container cube2">
-    <div class="background-cube">
-      <div class="face front">AI</div>
-      <div class="face back">IoT</div>
-      <div class="face right">CV</div>
-      <div class="face left">FPGA</div>
-      <div class="face top">Cyber</div>
-      <div class="face bottom">ML</div>
-    </div>
-  </div>
-
-  <div class="background-cube-container cube3">
     <div class="background-cube">
       <div class="face front">AI</div>
       <div class="face back">IoT</div>
@@ -342,6 +344,17 @@
     </div>
   </div>
 
+  <div class="background-cube-container cube7">
+    <div class="background-cube">
+      <div class="face front">AI</div>
+      <div class="face back">IoT</div>
+      <div class="face right">CV</div>
+      <div class="face left">FPGA</div>
+      <div class="face top">Cyber</div>
+      <div class="face bottom">ML</div>
+    </div>
+  </div>
+
   <!-- Main Content -->
   <header>
     <h1>Htet Paing Aung</h1>
@@ -351,46 +364,6 @@
       <p>As a passionate technologist and engineer, I actively engage with platforms like Udemy and Cisco Skills for All to stay at the forefront of emerging technologies. My expertise spans IoT, cloud computing, networking, cybersecurity, machine learning, and AI for embedded systems. With a strong foundation in Python, C++, and Verilog, I specialize in designing smart systems using Arduino, Raspberry Pi, and PIC.</p>
     </section>
   </header>
-
-  <main>
-    <section>
-      <h3><a href="./public/aiproj.html">Artificial Intelligent Model Training and Deployment</a></h3>
-      <img src="./assets/images/2.png" alt="AI training and deployment" />
-    </section>
-    <section>
-      <h3><a href="./public/ethicalhacking.html">Ethical Hacking Labs</a></h3>
-      <img src="./assets/images/X.png" alt="Ethical Hacking Labs" />
-    </section>
-    <section>
-      <h3><a href="./public/IOT.html">Internet of Things Projects</a></h3>
-      <img src="./assets/images/IOT.png" alt="IoT projects" />
-    </section>
-    <section>
-      <h3><a href="./public/CV.html">Machine Vision Projects</a></h3>
-      <img src="./assets/images/CV.png" alt="Computer Vision projects" />
-    </section>
-    <section>
-      <h3><a href="./public/embedded.html">Embedded Systems Projects</a></h3>
-      <img src="./assets/images/embedded.png" alt="Embedded Systems projects" />
-    </section>
-    <section>
-      <h3><a href="./public/softwares.html">Softwares/Apps with GUI projects</a></h3>
-      <img src="./assets/images/softwares.png" alt="GUI APPS projects" />
-    </section>
-    <section>
-      <h3><a href="./public/movie-ranking.html">General Projects</a></h3>
-      <img src="./assets/images/0.png" alt="General projects" />
-    </section>
-    <section>
-      <h3><a href="./public/birthday-invite.html">Certificates Achieved</a></h3>
-      <img src="./assets/images/1.png" alt="Certificates Achieved" />
-    </section>
-  </main>
-
-  <nav>
-    <a href="./public/about.html">About Me</a>
-    <a href="./public/contact.html">Contact Me</a>
-  </nav>
 </body>
 
 </html>
