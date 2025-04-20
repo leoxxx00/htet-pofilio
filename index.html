@@ -18,14 +18,14 @@
       overflow-x: hidden;
     }
 
-    /* === MULTIPLE BACKGROUND CUBES === */
+    /* === MULTIPLE SMALLER BACKGROUND CUBES === */
     .background-cube-container {
       position: fixed;
-      width: 600px;
-      height: 600px;
+      width: 300px; /* Reduced size */
+      height: 300px; /* Reduced size */
       transform-style: preserve-3d;
       pointer-events: none;
-      opacity: 0.08;
+      opacity: 0.1;
       z-index: 0;
     }
 
@@ -39,13 +39,13 @@
 
     .background-cube .face {
       position: absolute;
-      width: 600px;
-      height: 600px;
+      width: 300px; /* Reduced size */
+      height: 300px; /* Reduced size */
       display: flex;
       align-items: center;
       justify-content: center;
       font-family: 'Orbitron', sans-serif;
-      font-size: 3rem;
+      font-size: 2rem; /* Adjusted font size */
       background: rgba(0, 255, 234, 0.1);
       border: 2px solid #00ffe0;
       color: #ffffff;
@@ -54,12 +54,12 @@
       backdrop-filter: blur(2px);
     }
 
-    .background-cube .front { transform: rotateY(0deg) translateZ(300px); }
-    .background-cube .back { transform: rotateY(180deg) translateZ(300px); }
-    .background-cube .right { transform: rotateY(90deg) translateZ(300px); }
-    .background-cube .left { transform: rotateY(-90deg) translateZ(300px); }
-    .background-cube .top { transform: rotateX(90deg) translateZ(300px); }
-    .background-cube .bottom { transform: rotateX(-90deg) translateZ(300px); }
+    .background-cube .front { transform: rotateY(0deg) translateZ(150px); }
+    .background-cube .back { transform: rotateY(180deg) translateZ(150px); }
+    .background-cube .right { transform: rotateY(90deg) translateZ(150px); }
+    .background-cube .left { transform: rotateY(-90deg) translateZ(150px); }
+    .background-cube .top { transform: rotateX(90deg) translateZ(150px); }
+    .background-cube .bottom { transform: rotateX(-90deg) translateZ(150px); }
 
     @keyframes rotateBgCube {
       from { transform: rotateX(0deg) rotateY(0deg); }
@@ -68,21 +68,39 @@
 
     /* Position and scale for each cube */
     .cube1 {
-      top: 40%;
-      left: 30%;
-      transform: translate(-50%, -50%) scale(0.8);
+      top: 30%;
+      left: 20%;
+      transform: translate(-50%, -50%) scale(0.7);
     }
 
     .cube2 {
-      top: 60%;
-      left: 70%;
+      top: 40%;
+      left: 50%;
       transform: translate(-50%, -50%) scale(0.6);
     }
 
     .cube3 {
-      top: 20%;
+      top: 50%;
       left: 80%;
       transform: translate(-50%, -50%) scale(0.5);
+    }
+
+    .cube4 {
+      top: 20%;
+      left: 70%;
+      transform: translate(-50%, -50%) scale(0.6);
+    }
+
+    .cube5 {
+      top: 10%;
+      left: 80%;
+      transform: translate(-50%, -50%) scale(0.5);
+    }
+
+    .cube6 {
+      top: 60%;
+      left: 30%;
+      transform: translate(-50%, -50%) scale(0.7);
     }
 
     /* Different animation durations */
@@ -92,6 +110,18 @@
 
     .cube3 .background-cube {
       animation-duration: 120s;
+    }
+
+    .cube4 .background-cube {
+      animation-duration: 80s;
+    }
+
+    .cube5 .background-cube {
+      animation-duration: 150s;
+    }
+
+    .cube6 .background-cube {
+      animation-duration: 200s;
     }
 
     header {
@@ -245,7 +275,7 @@
 </head>
 
 <body>
-  <!-- Multiple Background Cubes -->
+  <!-- Multiple Smaller Background Cubes -->
   <div class="background-cube-container cube1">
     <div class="background-cube">
       <div class="face front">AI</div>
@@ -256,6 +286,7 @@
       <div class="face bottom">ML</div>
     </div>
   </div>
+
   <div class="background-cube-container cube2">
     <div class="background-cube">
       <div class="face front">AI</div>
@@ -266,7 +297,41 @@
       <div class="face bottom">ML</div>
     </div>
   </div>
+
   <div class="background-cube-container cube3">
+    <div class="background-cube">
+      <div class="face front">AI</div>
+      <div class="face back">IoT</div>
+      <div class="face right">CV</div>
+      <div class="face left">FPGA</div>
+      <div class="face top">Cyber</div>
+      <div class="face bottom">ML</div>
+    </div>
+  </div>
+
+  <div class="background-cube-container cube4">
+    <div class="background-cube">
+      <div class="face front">AI</div>
+      <div class="face back">IoT</div>
+      <div class="face right">CV</div>
+      <div class="face left">FPGA</div>
+      <div class="face top">Cyber</div>
+      <div class="face bottom">ML</div>
+    </div>
+  </div>
+
+  <div class="background-cube-container cube5">
+    <div class="background-cube">
+      <div class="face front">AI</div>
+      <div class="face back">IoT</div>
+      <div class="face right">CV</div>
+      <div class="face left">FPGA</div>
+      <div class="face top">Cyber</div>
+      <div class="face bottom">ML</div>
+    </div>
+  </div>
+
+  <div class="background-cube-container cube6">
     <div class="background-cube">
       <div class="face front">AI</div>
       <div class="face back">IoT</div>
