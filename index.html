@@ -4,7 +4,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Htet Paing Aung’s portfolio showcasing AI, Machine Learning, Cybersecurity, IoT, and Embedded Systems projects." />
   <title>Htet Paing Aung - AI & IT Projects</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@300;400&display=swap');
@@ -17,13 +16,6 @@
       color: #ffffff;
       perspective: 1000px;
       overflow-x: hidden;
-      transition: background 0.3s ease;
-    }
-
-    /* Dark Mode */
-    body.dark-mode {
-      background: #121212;
-      color: #ffffff;
     }
 
     /* === MULTIPLE BACKGROUND CUBES === */
@@ -210,7 +202,6 @@
       width: 100%;
       max-width: 300px;
       transition: transform 0.3s, box-shadow 0.3s;
-      object-fit: cover;
     }
 
     img:hover {
@@ -254,9 +245,6 @@
 </head>
 
 <body>
-  <!-- Theme Toggle Button -->
-  <button id="theme-toggle" style="position: fixed; top: 10px; right: 10px; padding: 10px 15px; background-color: #00ffe0; color: #fff; border: none; border-radius: 8px; cursor: pointer;">Toggle Dark Mode</button>
-
   <!-- Multiple Background Cubes -->
   <div class="background-cube-container cube1">
     <div class="background-cube">
@@ -302,60 +290,42 @@
   <main>
     <section>
       <h3><a href="./public/aiproj.html">Artificial Intelligent Model Training and Deployment</a></h3>
-      <img src="./assets/images/2.png" alt="AI training and deployment" loading="lazy" />
+      <img src="./assets/images/2.png" alt="AI training and deployment" />
     </section>
     <section>
       <h3><a href="./public/ethicalhacking.html">Ethical Hacking Labs</a></h3>
-      <img src="./assets/images/X.png" alt="Ethical Hacking Labs" loading="lazy" />
+      <img src="./assets/images/X.png" alt="Ethical Hacking Labs" />
     </section>
     <section>
       <h3><a href="./public/IOT.html">Internet of Things Projects</a></h3>
-      <img src="./assets/images/IOT.png" alt="IoT projects" loading="lazy" />
+      <img src="./assets/images/IOT.png" alt="IoT projects" />
     </section>
     <section>
       <h3><a href="./public/CV.html">Machine Vision Projects</a></h3>
-      <img src="./assets/images/CV.png" alt="Computer Vision projects" loading="lazy" />
+      <img src="./assets/images/CV.png" alt="Computer Vision projects" />
     </section>
     <section>
       <h3><a href="./public/embedded.html">Embedded Systems Projects</a></h3>
-      <img src="./assets/images/embedded.png" alt="Embedded Systems projects" loading="lazy" />
+      <img src="./assets/images/embedded.png" alt="Embedded Systems projects" />
+    </section>
+    <section>
+      <h3><a href="./public/softwares.html">Softwares/Apps with GUI projects</a></h3>
+      <img src="./assets/images/softwares.png" alt="GUI APPS projects" />
+    </section>
+    <section>
+      <h3><a href="./public/movie-ranking.html">General Projects</a></h3>
+      <img src="./assets/images/0.png" alt="General projects" />
+    </section>
+    <section>
+      <h3><a href="./public/birthday-invite.html">Certificates Achieved</a></h3>
+      <img src="./assets/images/1.png" alt="Certificates Achieved" />
     </section>
   </main>
 
   <nav>
-    <a href="https://www.linkedin.com/in/htet-paing-aung" target="_blank">LinkedIn</a>
-    <a href="https://github.com/htet-paing-aung" target="_blank">GitHub</a>
-    <a href="mailto:youremail@example.com">Email</a>
+    <a href="./public/about.html">About Me</a>
+    <a href="./public/contact.html">Contact Me</a>
   </nav>
-
-  <footer>
-    <p>Connect with me through the links above!</p>
-  </footer>
-
-  <script>
-    // Dark Mode Toggle
-    document.getElementById('theme-toggle').addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-    });
-
-    // Intersection Observer for Scroll Animations
-    const sections = document.querySelectorAll('section');
-    const observerOptions = {
-      threshold: 0.5
-    };
-
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in-view');
-        }
-      });
-    }, observerOptions);
-
-    sections.forEach(section => {
-      observer.observe(section);
-    });
-  </script>
 </body>
 
 </html>
