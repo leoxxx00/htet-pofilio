@@ -5,18 +5,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>XXX-GAMES-XXX</title>
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
   <style>
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: 
-        url('https://scontent-lhr8-2.xx.fbcdn.net/v/t39.30808-6/462243002_122163268868250579_1348442394681547534_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=VDe5-tux93AQ7kNvgGc6Xuh&_nc_ht=scontent-lhr8-2.xx&_nc_gid=AzvBNIX99hcwOAGyPNyLe6H&oh=00_AYAn7zraMf-8bVKdjXFTNliL8_GoGqHmedDEoBl0YQPNIA&oe=67097BBF') no-repeat center center fixed, 
-        #0d0d0d; /* Fallback background color */
+      font-family: 'Poppins', sans-serif;
+      background: url('https://scontent-lhr8-2.xx.fbcdn.net/v/t39.30808-6/462243002_122163268868250579_1348442394681547534_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=VDe5-tux93AQ7kNvgGc6Xuh&_nc_ht=scontent-lhr8-2.xx&_nc_gid=AzvBNIX99hcwOAGyPNyLe6H&oh=00_AYAn7zraMf-8bVKdjXFTNliL8_GoGqHmedDEoBl0YQPNIA&oe=67097BBF') no-repeat center center fixed, #0d0d0d;
       background-size: cover;
-      background-blend-mode: overlay; /* Blend the background color and image */
+      background-blend-mode: overlay;
       color: #ffffff;
       margin: 0;
       padding: 20px;
       line-height: 1.6;
+      scroll-behavior: smooth;
     }
 
     header {
@@ -38,7 +42,7 @@
 
     header h2 {
       font-family: 'Montserrat', sans-serif;
-      font-size: 1.75rem;
+      font-size: 1.5rem;
       color: #ffd700;
       margin-top: 0.5rem;
       text-shadow: 0 0 8px #ffd700;
@@ -46,112 +50,130 @@
 
     main {
       padding: 2rem;
-      background-color: #001f3f;
-      border-radius: 8px;
+      background: rgba(0, 31, 63, 0.7);
+      backdrop-filter: blur(10px);
+      border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      display: grid;
+      gap: 2rem;
     }
 
     section {
-      margin-bottom: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
     }
 
     section h2 {
+      grid-column: 1 / -1;
       color: #00d9ff;
       font-family: 'Montserrat', sans-serif;
-      font-size: 1.75rem;
-      margin-bottom: 1.5rem;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-align: center;
       text-shadow: 0 0 10px #00d9ff;
     }
 
     .project {
-      margin-bottom: 1.5rem;
-      padding: 1rem;
-      background-color: #011f4b;
-      border-radius: 8px;
+      background: rgba(1, 31, 75, 0.6);
+      backdrop-filter: blur(8px);
+      padding: 1.5rem;
+      border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-      transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
       border-left: 5px solid #ffd700;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
 
     .project:hover {
-      transform: scale(1.03);
+      transform: scale(1.05);
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
       background-color: #022c6b;
     }
 
-    .project a {
-      color: #00d9ff;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
-
-    .project a:hover {
+    .project i {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
       color: #ffd700;
-      text-decoration: underline;
     }
 
-    nav {
-      background-color: #00d9ff;
-      padding: 1rem;
-      text-align: center;
-      margin-top: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    }
-
-    nav a {
-      color: #0d0d0d;
-      margin: 0 1rem;
+    .project-title {
+      font-size: 1.25rem;
       font-weight: bold;
-      font-family: 'Montserrat', sans-serif;
-      text-decoration: none;
-      transition: color 0.3s ease, background-color 0.3s ease;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      background-color: #ffd700;
+      margin-bottom: 1rem;
     }
 
-    nav a:hover {
-      background-color: #ff4500;
-      color: #ffffff;
+    .play-button {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: #00d9ff;
+      color: #0d0d0d;
+      font-weight: bold;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.3s, color 0.3s;
     }
+
+    .play-button:hover {
+      background: #ffd700;
+      color: #0d0d0d;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
   </style>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
+
   <header>
     <h1>Htet Paing Aung</h1>
-    <h2>Live GAMES for fun </h2>
+    <h2>Live GAMES for fun</h2>
   </header>
 
-  <main role="main">
+  <main>
     <section>
-      <h2>Live playable games</h2>
+      <h2>🎮 Live Playable Games</h2>
 
       <div class="project">
-        1. Tic Tac Toe
-        (<a href="https://leoxxx00.github.io/ttt/" target="_blank">Detail link</a>)
-      </div>
-      
-     <div class="project">
-        2. Snake game
-        (<a href="https://leoxxx00.github.io/snake-game/" target="_blank">Detail link</a>)
+        <i class="fas fa-times-circle"></i>
+        <div class="project-title">Tic Tac Toe</div>
+        <a class="play-button" href="https://leoxxx00.github.io/ttt/" target="_blank">Play Now</a>
       </div>
 
       <div class="project">
-        3. Rock Paper Scissors 
-        (<a href="https://leoxxx00.github.io/RockPaperScissor/" target="_blank">Detail link</a>)
+        <i class="fas fa-apple-alt"></i>
+        <div class="project-title">Snake Game</div>
+        <a class="play-button" href="https://leoxxx00.github.io/snake-game/" target="_blank">Play Now</a>
       </div>
-      
-       <div class="project">
-        4. Car game  
-        (<a href="https://leoxxx00.github.io/cargrme/" target="_blank">Detail link</a>)
+
+      <div class="project">
+        <i class="fas fa-hand-rock"></i>
+        <div class="project-title">Rock Paper Scissors</div>
+        <a class="play-button" href="https://leoxxx00.github.io/RockPaperScissor/" target="_blank">Play Now</a>
       </div>
-      
+
+      <div class="project">
+        <i class="fas fa-car"></i>
+        <div class="project-title">Car Game</div>
+        <a class="play-button" href="https://leoxxx00.github.io/cargrme/" target="_blank">Play Now</a>
+      </div>
+
     </section>
   </main>
+
+  <footer>
+    © 2025 Htet Paing Aung | All rights reserved.
+  </footer>
 
 </body>
 
