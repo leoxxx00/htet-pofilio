@@ -1,218 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore cutting-edge AI projects by Htet, including lung X-ray analysis, ECG signal classification, object detection, and more.">
-    <meta name="keywords" content="AI, machine learning, deep learning, projects, Htet, lung X-ray, ECG, object detection, handwritten digit recognition">
-    <meta name="author" content="Htet">
-    <title>AI Projects by Htet</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore cutting-edge AI projects by Htet, including lung X-ray analysis, ECG signal classification, object detection, and more." />
+  <meta name="keywords" content="AI, machine learning, deep learning, projects, Htet, lung X-ray, ECG, object detection, handwritten digit recognition" />
+  <meta name="author" content="Htet" />
+  <title>AI Projects by Htet</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            color: #ffffff;
-            background: linear-gradient(135deg, #1c1c1c, #292929);
-            background-image: url('https://www.europarl.europa.eu/resources/library/images/20230607PHT95601/20230607PHT95601_original.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            overflow-x: hidden;
-        }
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      color: #ffffff;
+      background: linear-gradient(135deg, #1c1c1c, #292929);
+      background-image: url('https://www.europarl.europa.eu/resources/library/images/20230607PHT95601/20230607PHT95601_original.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      overflow-x: hidden;
+    }
 
-        .container {
-            max-width: 900px;
-            margin: 20px;
-            padding: 30px;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            animation: fadeIn 1s ease-in-out;
-        }
+    .container {
+      max-width: 900px;
+      margin: 20px;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      animation: fadeIn 1s ease-in-out;
+    }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: scale(0.95); }
-            to { opacity: 1; transform: scale(1); }
-        }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
 
-        h1 {
-            text-align: center;
-            font-size: 2.8em;
-            color: #00e6e6;
-            text-shadow: 0 0 10px #00e6e6, 0 0 20px #00ffff;
-            margin-bottom: 30px;
-        }
+    h1 {
+      text-align: center;
+      font-size: 2.8em;
+      color: #00e6e6;
+      text-shadow: 0 0 10px #00e6e6, 0 0 20px #00ffff;
+      margin-bottom: 30px;
+    }
 
-        .project-section {
-            margin-bottom: 30px;
-            padding: 20px;
-            background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(0, 255, 255, 0.2));
-            border-radius: 12px;
-            border: 1px solid rgba(0, 255, 255, 0.3);
-            box-shadow: 0 4px 15px rgba(0, 255, 255, 0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+    .project-section {
+      margin-bottom: 30px;
+      padding: 20px;
+      background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(0, 255, 255, 0.2));
+      border-radius: 12px;
+      border: 1px solid rgba(0, 255, 255, 0.3);
+      box-shadow: 0 4px 15px rgba(0, 255, 255, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-        .project-section:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 20px rgba(0, 255, 255, 0.5);
-        }
+    .project-section:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0, 255, 255, 0.5);
+    }
 
-        h2 {
-            font-size: 1.8em;
-            color: #82eaff;
-            margin-bottom: 15px;
-            text-shadow: 0 0 5px #82eaff;
-        }
+    h2 {
+      font-size: 1.8em;
+      color: #82eaff;
+      margin-bottom: 15px;
+      text-shadow: 0 0 5px #82eaff;
+    }
 
-        .project-section p {
-            color: #d1f1ff;
-            line-height: 1.6;
-        }
+    .project-section p {
+      color: #d1f1ff;
+      line-height: 1.6;
+    }
 
-        .project-section img {
-            max-width: 100%;
-            height: auto;
-            margin-top: 15px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
+    .project-section img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
 
-        a {
-            color: #00e6e6;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s, text-shadow 0.3s;
-        }
+    a {
+      color: #00e6e6;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s, text-shadow 0.3s;
+    }
 
-        a:hover {
-            color: #ff00ff;
-            text-shadow: 0 0 8px #ff00ff;
-        }
+    a:hover {
+      color: #ff00ff;
+      text-shadow: 0 0 8px #ff00ff;
+    }
 
-        .explore-link {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 12px 25px;
-            border-radius: 10px;
-            background: linear-gradient(135deg, #00ffea, #1b9aaa);
-            color: #ffffff;
-            font-weight: bold;
-            box-shadow: 0 6px 12px rgba(0, 255, 255, 0.3);
-            transition: all 0.3s;
-        }
+    .explore-link {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 25px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #00ffea, #1b9aaa);
+      color: #ffffff;
+      font-weight: bold;
+      box-shadow: 0 6px 12px rgba(0, 255, 255, 0.3);
+      transition: all 0.3s;
+    }
 
-        .explore-link:hover {
-            background: linear-gradient(135deg, #ff00ff, #1f4068);
-            box-shadow: 0 10px 20px rgba(255, 0, 255, 0.4);
-            transform: translateY(-3px);
-        }
+    .explore-link:hover {
+      background: linear-gradient(135deg, #ff00ff, #1f4068);
+      box-shadow: 0 10px 20px rgba(255, 0, 255, 0.4);
+      transform: translateY(-3px);
+    }
 
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2em;
-            }
-            h2 {
-                font-size: 1.5em;
-            }
-            .container {
-                padding: 20px;
-            }
-        }
-    </style>
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2em;
+      }
+      h2 {
+        font-size: 1.5em;
+      }
+      .container {
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>AI Projects by Htet</h1>
-          <div style="font-family: Arial, sans-serif; max-width: 800px; margin: 20px auto; line-height: 1.6; color: #333;">
-  <h2>🧠 Smart AI Assistant</h2>
-  <p>
-    This assistant combines multiple powerful tools to provide accurate and context-aware answers:
-  </p>
-  <ul>
-    <li>🌐 <strong>Wikipedia</strong> for general knowledge queries</li>
-    <li>📚 <strong>Semantic Scholar API</strong> for academic and research questions</li>
-    <li>🔎 <strong>DuckDuckGo</strong> for real-time and current web search</li>
-    <li>🧠 <strong>Embedding Memory</strong> with FAISS + Sentence Transformers to store & retrieve useful context</li>
-    <li>🤖 <strong>LLaMA 3.1 via Hugging Face Inference API</strong> for generating coherent and complete answers</li>
-  </ul>
+  <div class="container">
+    <h1>AI Projects by Htet</h1>
 
-  <img src="AIB.png" alt="AI search engine" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-top: 20px;">
-
-  <p style="margin-top: 15px;">
-    🎥 <a href="https://www.youtube.com/watch?v=CDYQPuW_5TA" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">Watch a demo video here</a>
-    🤖 <a href="https://huggingface.co/spaces/resberry/ResearchWebBrowseAssistant" style="color: #007bff; text-decoration: none; font-weight: bold;">Interact With a Model</a>
-  </p>
-</div>
-
-        <div class="project-section">
-            <h2>Hedic medium size Q&A Chatbot</h2>
-            <p>This project involves fine-tuning a raw LLM (DistillGPT- a quantizer version of DialogGPT) into a Medical  Q&A chatbot. **Note:** This is not a substitute for professional medical advice. Always consult a healthcare professional for medical concerns. The model is the quantized version of DialogGPT and trained on diverse medical Q&A datasets from Kaggle across various domains and general medicine. Future improvements will focus on explainability and domain-specific features.</p>
-            <img src="chat1.png" src="chat2.png"alt="Dialog Mini GPT chatbot interface screenshot">
-            <a class="explore-link" href="https://huggingface.co/spaces/resberry/H-Medic" target="_blank">Chat with fine tuned DistillMedicalQnAGPT</a>
-    
-        </div>
-        <div class="project-section">
-            <h2>Dialog Mini GPT Q&A Chatbot</h2>
-            <p>This project involves fine-tuning a raw LLM (DialogMini) into a Q&A chatbot. The model is still in early development stages.</p>
-            <img src="D.png" alt="Dialog Mini GPT chatbot interface screenshot">
-            <a class="explore-link" href="https://huggingface.co/spaces/resberry/X" target="_blank">Chat with Dialog Mini GPT</a>
-        </div>
-
-        <div class="project-section">
-            <h2>AI for Lung X-ray Analysis</h2>
-            <p>This project involves training an AI model to detect COVID-19, Pneumonia, TB, and Normal conditions from lung X-ray images. The model uses advanced convolutional neural networks (CNN) and has been trained on a diverse dataset to ensure high accuracy.</p>
-            <img src="y.png" alt="Lung X-ray analysis AI results visualization">
-            <a class="explore-link" href="https://huggingface.co/spaces/resberry/X-vis" target="_blank">Interact with model here</a>
-        </div>
-
-        <div class="project-section">
-            <h2>ECG Signal Classification with AI</h2>
-            <p>Investigating various AI models to detect ECG signals and classify them into 5 classes using the large ECG PTB XL dataset. The LSTM model with an additional layer achieves 90% F1 score for normal signals and 60%-80% for abnormal classes.</p>
-            <img src="z.png" alt="ECG signal classification AI visualization">
-            <a class="explore-link" href="https://github.com/leoxxx00/ECG.git" target="_blank">Click here to explore more</a>
-        </div>
-
-        <div class="project-section">
-            <h2>YOLO Object Detection Transfer Learning Showcase</h2>
-            <p>Showcasing transfer learning using YOLO CNN for object detection. This model is ideal for applications in robotics, defense drones, industrial settings, and more.</p>
-            <img src="YOLO.png" alt="YOLO object detection AI visualization">
-            <a class="explore-link" href="https://www.linkedin.com/posts/htet-paing-aung-575468282_pythonprogramming-computervision-opencv-activity-7147719446051094528-pqji/?utm_source=share&utm_medium=member_desktop" target="_blank">Showcase</a>
-        </div>
-
-        <div class="project-section">
-            <h2>Handwritten Digit Classifier</h2>
-            <p>Using Image CNN with edge and noise detection features to recognize handwritten digits from the MNIST dataset. Ensure clear and distinct handwriting for the best results.</p>
-            <img src="x.png" alt="Handwritten digit classifier results">
-            <a class="explore-link" href="https://github.com/leoxxx00/handwrittenclissifier.git" target="_blank">Git Link</a>
-            <a class="explore-link" href="https://huggingface.co/spaces/resberry/digit-classifier" target="_blank">Interact with Model</a>
-        </div>
-
-        <div class="project-section">
-            <h2>Tic Tac Toe Game AI</h2>
-            <p>Exploring AI models such as CNN, LSTM, and hybrid CNN-LSTM for Tic Tac Toe. Interestingly, the LSTM-CNN hybrid model underperforms compared to others in this context.</p>
-            <img src="a.png" alt="Tic Tac Toe game AI visualization">
-            <a class="explore-link" href="https://github.com/leoxxx00/TTTGameAI.git" target="_blank">Git Link</a>
-            <a class="explore-link" href="https://www.tiktok.com/@leond797/video/7404166195554864417?is_from_webapp=1&sender_device=pc&web_id=7399281724339389985" target="_blank">Video Here</a>
-        </div>
-        
-             <div class="project-section">
-            <h2>Rock Paper Siccor with LSTM</h2>
-            <p>Fun and interesting Rock Paper Siccors with LSTM</p>
-            <img src="rps.png" alt="Tic Tac Toe game AI visualization">
-            <a class="explore-link" href="https://huggingface.co/spaces/resberry/RPS" target="_blank">Play with LSTM AI</a>
-            
-        </div>
-      
+    <div class="project-section">
+      <h2>🧠 Smart AI Assistant</h2>
+      <p>This assistant combines multiple powerful tools to provide accurate and context-aware answers:</p>
+      <ul>
+        <li>🌐 <strong>Wikipedia</strong> for general knowledge queries</li>
+        <li>📚 <strong>Semantic Scholar API</strong> for academic and research questions</li>
+        <li>🔎 <strong>DuckDuckGo</strong> for real-time and current web search</li>
+        <li>🧠 <strong>Embedding Memory</strong> with FAISS + Sentence Transformers</li>
+        <li>🤖 <strong>LLaMA 3.1</strong> via Hugging Face for response generation</li>
+      </ul>
+      <img src="AIB.png" alt="Smart AI Assistant interface">
+      <p><a class="explore-link" href="https://huggingface.co/spaces/resberry/ResearchWebBrowseAssistant" target="_blank">Interact With a Model</a></p>
     </div>
+
+    <div class="project-section">
+      <h2>Hedic Medium-Sized Medical Chatbot</h2>
+      <p>Fine-tuned version of DistillGPT trained on medical Q&A datasets. Not for professional medical use. Focuses on expanding coverage and domain-specific reasoning.</p>
+      <img src="chat1.png" alt="Hedic Medical Chatbot Interface">
+      <a class="explore-link" href="https://huggingface.co/spaces/resberry/H-Medic" target="_blank">Try Hedic Bot</a>
+    </div>
+
+    <div class="project-section">
+      <h2>Dialog Mini GPT Q&A Chatbot</h2>
+      <p>Early-stage fine-tuning of DialogMini for conversational Q&A tasks.</p>
+      <img src="D.png" alt="Dialog Mini GPT chatbot interface">
+      <a class="explore-link" href="https://huggingface.co/spaces/resberry/X" target="_blank">Chat with Dialog Mini</a>
+    </div>
+
+    <div class="project-section">
+      <h2>AI for Lung X-ray Analysis</h2>
+      <p>Detects COVID-19, Pneumonia, TB, and Normal conditions from lung X-rays using CNN models.</p>
+      <img src="y.png" alt="Lung X-ray classification AI results">
+      <a class="explore-link" href="https://huggingface.co/spaces/resberry/X-vis" target="_blank">Interact with Model</a>
+    </div>
+
+    <div class="project-section">
+      <h2>ECG Signal Classification with AI</h2>
+      <p>Classifies ECG signals using LSTM models on PTB XL dataset. F1 scores vary from 60%-90%.</p>
+      <img src="z.png" alt="ECG signal AI model visualization">
+      <a class="explore-link" href="https://github.com/leoxxx00/ECG.git" target="_blank">Explore on GitHub</a>
+    </div>
+
+    <div class="project-section">
+      <h2>YOLO Object Detection Transfer Learning</h2>
+      <p>Transfer learning via YOLO for real-time object detection tasks, adaptable to robotics and defense.</p>
+      <img src="YOLO.png" alt="YOLO object detection model">
+      <a class="explore-link" href="https://www.linkedin.com/posts/htet-paing-aung-575468282_pythonprogramming-computervision-opencv-activity-7147719446051094528-pqji/" target="_blank">See Showcase</a>
+    </div>
+
+    <div class="project-section">
+      <h2>Handwritten Digit Classifier</h2>
+      <p>Recognizes digits from the MNIST dataset using edge detection and CNNs.</p>
+      <img src="x.png" alt="Digit classifier interface">
+      <a class="explore-link" href="https://github.com/leoxxx00/handwrittenclissifier.git" target="_blank">GitHub</a>
+      <a class="explore-link" href="https://huggingface.co/spaces/resberry/digit-classifier" target="_blank">Try Model</a>
+    </div>
+
+    <div class="project-section">
+      <h2>Tic Tac Toe Game AI</h2>
+      <p>Experiments with CNN, LSTM, and hybrid models for game strategy. LSTM-CNN hybrid underperforms.</p>
+      <img src="a.png" alt="Tic Tac Toe AI interface">
+      <a class="explore-link" href="https://github.com/leoxxx00/TTTGameAI.git" target="_blank">GitHub</a>
+      <a class="explore-link" href="https://www.tiktok.com/@leond797/video/7404166195554864417" target="_blank">Watch Video</a>
+    </div>
+
+    <div class="project-section">
+      <h2>Rock Paper Scissors with LSTM</h2>
+      <p>Fun implementation of Rock Paper Scissors game using LSTM for move prediction.</p>
+      <img src="rps.png" alt="Rock Paper Scissors LSTM game">
+      <a class="explore-link" href="https://huggingface.co/spaces/resberry/RPS" target="_blank">Play Now</a>
+    </div>
+  </div>
 </body>
 </html>
