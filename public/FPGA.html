@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pratical FPGA programmin wiht xilinx vivado on BASYS 3</title>
+    <title>Practical FPGA Programming with Xilinx Vivado on BASYS 3</title>
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap');
@@ -21,7 +21,6 @@
             overflow-x: hidden;
         }
 
-        /* Smooth Fade-in Animation */
         @keyframes fadeIn {
             0% { opacity: 0; transform: translateY(20px); }
             100% { opacity: 1; transform: translateY(0); }
@@ -69,9 +68,13 @@
             font-size: 1.7rem;
         }
 
-        .project-section p {
+        .project-section p, ul, li {
             color: #c8fff1;
             line-height: 1.6;
+        }
+
+        ul {
+            padding-left: 20px;
         }
 
         a {
@@ -93,7 +96,6 @@
             transform: scale(1.07);
         }
 
-        /* Optional Floating Circuit Pattern */
         .circuit-bg {
             position: fixed;
             top: 0;
@@ -104,7 +106,6 @@
             opacity: 0.06;
             pointer-events: none;
         }
-
     </style>
 </head>
 
@@ -113,30 +114,35 @@
 <div class="circuit-bg"></div>
 
 <div class="container">
-    <h1>Getting started wiht FPGA</h1>
+    <h1>Getting Started with FPGA</h1>
 
     <div class="project-section">
-        <h2>Getting started wiht FPGA</h2>
+        <h2>Introduction</h2>
 
-        <p>
-            + Important notice in progrmming FPGA +
-            - Make sure u know the chip and its model number
-            - Know the importance of Jumper wires
-            - make sure to use usb data transfer cable
-            + Steps in programming FPGA+
-            1. Create a file 
-            2. Know the chip name and model
-            3. Make sure to keep same name in file
-            4. Create design source file
-            5. Create constrains
-            6. Run synthesis
-            7. Run implementation
-            8. Generate bit stream
-            9. Go to open hardware manager and open target then click auto connect
-            10. Go to open hardware manager and click program device
-        </p>
+        <p>Here are the essential steps and notes to begin programming FPGAs using Xilinx Vivado on the BASYS 3 board.</p>
 
-        <a href="https://github.com/leoxxx00/Getting-started-with-FPGA-with-veriolg-and-Xilinx-vivid" target="_blank">codes</a>
+        <h2>Important Notes</h2>
+        <ul>
+            <li>Know your FPGA chip and exact model number.</li>
+            <li>Understand the purpose of jumper settings.</li>
+            <li>Use a proper data-transfer USB cable (not a charging-only cable).</li>
+        </ul>
+
+        <h2>Steps to Program an FPGA</h2>
+        <ol>
+            <li>Create a new Vivado project.</li>
+            <li>Select the correct FPGA chip/model (e.g., Artix-7 XC7A35T-1CPG236C).</li>
+            <li>Use consistent naming for your top module.</li>
+            <li>Add your design source files (VHDL or Verilog).</li>
+            <li>Create or add your constraints file (XDC) for pins.</li>
+            <li>Run Synthesis.</li>
+            <li>Run Implementation.</li>
+            <li>Generate Bitstream.</li>
+            <li>Open Hardware Manager → Open Target → Auto-connect.</li>
+            <li>Program Device with the generated bitstream.</li>
+        </ol>
+
+        <a href="https://github.com/leoxxx00/Getting-started-with-FPGA-with-veriolg-and-Xilinx-vivid" target="_blank">View Codes</a>
         <a href="https://youtu.be/tLP1IkkSDHE" target="_blank">Watch Video</a>
     </div>
 </div>
