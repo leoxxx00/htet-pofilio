@@ -3,114 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FPGA Block Post Tutorials</title>
+    <title>FPGA Project Showcase</title>
 
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap');
+
         body {
+            font-family: 'Roboto Mono', monospace;
             margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f4f6f9;
-            color: #333;
+            padding: 0;
+            background: radial-gradient(circle at top, #0f1a13 0%, #050805 80%);
+            color: #7fffd4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
         }
 
-        header {
-            background: #1a73e8;
-            color: white;
-            padding: 30px;
-            text-align: center;
+        /* Smooth Fade-in Animation */
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
         }
 
         .container {
-            max-width: 900px;
-            margin: 40px auto;
-            background: white;
+            width: 90%;
+            max-width: 800px;
             padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            background: rgba(5, 15, 10, 0.85);
+            border-radius: 16px;
+            border: 1px solid #00ffa6;
+            box-shadow: 0 0 25px rgba(0, 255, 170, 0.25);
+            animation: fadeIn 1s ease-out;
+            backdrop-filter: blur(4px);
         }
 
-        h2 {
-            color: #1a73e8;
-        }
-
-        .tutorial-block {
-            border-left: 4px solid #1a73e8;
-            padding: 15px 20px;
-            margin-bottom: 30px;
-            background: #f9fbff;
-            border-radius: 6px;
-        }
-
-        .tutorial-block img {
-            width: 100%;
-            border-radius: 8px;
-            margin-top: 15px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-        }
-
-        footer {
-            margin-top: 40px;
-            background: #1a73e8;
-            color: white;
-            padding: 15px;
+        h1 {
             text-align: center;
+            font-size: 2.3rem;
+            color: #00ffa6;
+            text-shadow: 0 0 12px #00ffa6;
+            margin-bottom: 35px;
+        }
+
+        .project-section {
+            background: #0f2017;
+            border: 1px solid #00ffa6;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 0 15px rgba(0, 255, 170, 0.25);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            animation: fadeIn 1.2s ease-out;
+        }
+
+        .project-section:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 28px #00ffa6;
+        }
+
+        .project-section h2 {
+            color: #7fffd4;
+            text-shadow: 0 0 8px #00ffa6;
+            margin-bottom: 10px;
+            font-size: 1.7rem;
+        }
+
+        .project-section p {
+            color: #c8fff1;
+            line-height: 1.6;
         }
 
         a {
-            color: #1a73e8;
-            text-decoration: none;
+            display: inline-block;
+            margin-top: 18px;
+            padding: 10px 18px;
+            background: #00ffa6;
+            color: #00251a;
             font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            box-shadow: 0 0 12px #00ffa6;
+            transition: 0.3s ease;
         }
 
         a:hover {
-            text-decoration: underline;
+            background: #00d4ff;
+            box-shadow: 0 0 18px #00d4ff;
+            transform: scale(1.07);
+        }
+
+        /* Optional Floating Circuit Pattern */
+        .circuit-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://www.transparenttextures.com/patterns/circuit-board.png');
+            opacity: 0.06;
+            pointer-events: none;
         }
 
     </style>
 </head>
+
 <body>
 
-<header>
-    <h1>FPGA Block Post Tutorials</h1>
-    <p>Simple tutorials to help you understand FPGA basics and design concepts.</p>
-</header>
+<div class="circuit-bg"></div>
 
 <div class="container">
+    <h1>FPGA Project Showcase</h1>
 
-    <div class="tutorial-block">
-        <h2>1. Introduction to FPGA</h2>
-        <p>Learn the basics of FPGA architecture, including logic blocks, LUTs, routing fabric, and more.</p>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/FPGA.svg" alt="FPGA Diagram">
-        <a href="#">Read More →</a>
+    <div class="project-section">
+        <h2>FPGA Programming: Digital Lock System (Verilog)</h2>
+
+        <p>
+            A digital lock system implemented using Verilog on an FPGA board.  
+            This project demonstrates:
+            <br><br>
+            • Parallel processing using shift registers  
+            • Real-time input handling  
+            • Synchronous logic design  
+            • Hardware-level digital security concepts  
+            <br><br>
+            FPGAs serve as the backbone of modern systems in telecom, AI hardware, aerospace, and more.  
+            This design uses clocked logic and modular coding to build a reliable lock system.
+        </p>
+
+        <a href="https://github.com/leoxxx00/VHDLlocksystemparallel.git" target="_blank">GitHub</a>
+        <a href="https://www.tiktok.com/@leond797/video/7444102848540839200?is_from_webapp=1" target="_blank">Watch Demo</a>
     </div>
-
-    <div class="tutorial-block">
-        <h2>2. Understanding Block Diagrams</h2>
-        <p>Explore how block diagrams represent modules, signal flow, and structural hierarchy in FPGA designs.</p>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/d/df/FPGA_Architecture.png" alt="FPGA Block Architecture">
-        <a href="#">Read More →</a>
-    </div>
-
-    <div class="tutorial-block">
-        <h2>3. Creating Your First FPGA Project</h2>
-        <p>Start your first FPGA project in Vivado and build a simple LED blinking circuit using VHDL or Verilog.</p>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/FPGA-board.jpg" alt="FPGA Development Board">
-        <a href="#">Read More →</a>
-    </div>
-
-    <div class="tutorial-block">
-        <h2>4. Block-Based Design in Vivado</h2>
-        <p>Learn how to use Vivado's Block Design environment to connect IP blocks visually and generate HDL automatically.</p>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/66/Vivado_block_design_example.png" alt="Vivado Block Design">
-        <a href="#">Read More →</a>
-    </div>
-
 </div>
-
-<footer>
-    © 2025 FPGA Tutorials · Designed for beginners and students
-</footer>
 
 </body>
 </html>
-
