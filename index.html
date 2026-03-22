@@ -1,31 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Htet Paing Aung</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@300;400&display=swap');
+  <meta name="description" content="Portfolio of Htet Paing Aung — Electronic Engineering, AI, Machine Learning, FPGA, IoT, Embedded Systems, Cloud, and Data Analytics projects." />
+  <title>Htet Paing Aung | Portfolio</title>
 
-    body {
-      font-family: 'Roboto Mono', monospace;
-      background: radial-gradient(circle, #020024, #090979, #00d4ff);
-      margin: 0;
-      padding: 0;
-      color: #ffffff;
-      perspective: 1000px;
-      overflow-x: hidden;
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Roboto+Mono:wght@300;400;500;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg-1: #030816;
+      --bg-2: #071b3d;
+      --bg-3: #0f2f63;
+      --card: rgba(8, 18, 40, 0.72);
+      --card-border: rgba(120, 214, 255, 0.22);
+      --text: #eef7ff;
+      --muted: #b7cae8;
+      --cyan: #69f3ff;
+      --cyan-strong: #00ffe0;
+      --violet: #d369ff;
+      --gold: #ffd166;
+      --shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+      --radius-xl: 24px;
+      --radius-lg: 18px;
+      --max-width: 1200px;
     }
 
-    /* === MULTIPLE BACKGROUND CUBES === */
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      font-family: 'Roboto Mono', monospace;
+      background:
+        radial-gradient(circle at top left, rgba(0, 255, 224, 0.08), transparent 25%),
+        radial-gradient(circle at 85% 15%, rgba(211, 105, 255, 0.12), transparent 20%),
+        linear-gradient(135deg, var(--bg-1), var(--bg-2) 50%, var(--bg-3));
+      min-height: 100vh;
+      overflow-x: hidden;
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 4px;
+      border-radius: 10px;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .background-grid {
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 34px 34px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,0.2));
+      pointer-events: none;
+      z-index: 0;
+    }
+
     .background-cube-container {
       position: fixed;
-      width: 600px;
-      height: 600px;
+      width: 340px;
+      height: 340px;
       transform-style: preserve-3d;
       pointer-events: none;
-      opacity: 0.08;
+      opacity: 0.1;
       z-index: 0;
     }
 
@@ -34,320 +94,696 @@
       height: 100%;
       position: relative;
       transform-style: preserve-3d;
-      animation: rotateBgCube 60s infinite linear;
+      animation: rotateBgCube 50s linear infinite;
     }
 
     .background-cube .face {
       position: absolute;
-      width: 600px;
-      height: 600px;
+      width: 340px;
+      height: 340px;
       display: flex;
       align-items: center;
       justify-content: center;
       font-family: 'Orbitron', sans-serif;
-      font-size: 3rem;
-      background: rgba(0, 255, 234, 0.1);
-      border: 2px solid #00ffe0;
-      color: #ffffff;
-      text-shadow: 0 0 15px #00ffe0;
-      box-shadow: inset 0 0 60px rgba(0, 255, 234, 0.3);
+      font-size: 2rem;
+      letter-spacing: 0.08em;
+      color: rgba(255,255,255,0.9);
+      background: rgba(0, 255, 224, 0.06);
+      border: 1px solid rgba(0, 255, 224, 0.28);
+      box-shadow: inset 0 0 45px rgba(0, 255, 224, 0.14);
       backdrop-filter: blur(2px);
+      text-shadow: 0 0 18px rgba(0, 255, 224, 0.4);
     }
 
-    .background-cube .front { transform: rotateY(0deg) translateZ(300px); }
-    .background-cube .back { transform: rotateY(180deg) translateZ(300px); }
-    .background-cube .right { transform: rotateY(90deg) translateZ(300px); }
-    .background-cube .left { transform: rotateY(-90deg) translateZ(300px); }
-    .background-cube .top { transform: rotateX(90deg) translateZ(300px); }
-    .background-cube .bottom { transform: rotateX(-90deg) translateZ(300px); }
+    .front  { transform: rotateY(0deg) translateZ(170px); }
+    .back   { transform: rotateY(180deg) translateZ(170px); }
+    .right  { transform: rotateY(90deg) translateZ(170px); }
+    .left   { transform: rotateY(-90deg) translateZ(170px); }
+    .top    { transform: rotateX(90deg) translateZ(170px); }
+    .bottom { transform: rotateX(-90deg) translateZ(170px); }
+
+    .cube1 { top: 12%; left: 6%; transform: scale(0.95); }
+    .cube2 { top: 58%; right: 4%; transform: scale(0.78); }
+    .cube3 { top: 28%; right: 26%; transform: scale(0.58); }
+    .cube2 .background-cube { animation-duration: 70s; }
+    .cube3 .background-cube { animation-duration: 95s; }
 
     @keyframes rotateBgCube {
       from { transform: rotateX(0deg) rotateY(0deg); }
-      to { transform: rotateX(360deg) rotateY(360deg); }
+      to   { transform: rotateX(360deg) rotateY(360deg); }
     }
 
-    /* Position and scale for each cube */
-    .cube1 {
-      top: 40%;
-      left: 30%;
-      transform: translate(-50%, -50%) scale(0.8);
-    }
-
-    .cube2 {
-      top: 60%;
-      left: 70%;
-      transform: translate(-50%, -50%) scale(0.6);
-    }
-
-    .cube3 {
-      top: 20%;
-      left: 80%;
-      transform: translate(-50%, -50%) scale(0.5);
-    }
-
-    /* Different animation durations */
-    .cube2 .background-cube {
-      animation-duration: 90s;
-    }
-
-    .cube3 .background-cube {
-      animation-duration: 120s;
-    }
-
-    header {
-      background: rgba(0, 0, 0, 0.8);
-      backdrop-filter: blur(15px);
-      border-radius: 20px;
-      margin: 2rem auto;
-      padding: 3rem;
-      text-align: center;
-      max-width: 80%;
-      box-shadow: 0px 4px 30px rgba(0, 255, 255, 0.8);
-      z-index: 1;
+    .container {
+      width: min(calc(100% - 2rem), var(--max-width));
+      margin: 0 auto;
       position: relative;
+      z-index: 1;
     }
 
-    header h1 {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 3.5rem;
-      color: #00ffe0;
-      text-shadow: 0 0 30px #00ffe0, 0 0 60px #ff00ff;
-      animation: glow 2s infinite alternate;
+    .site-header {
+      padding: 1rem 0 0;
     }
 
-    @keyframes glow {
-      from { text-shadow: 0 0 30px #00ffe0, 0 0 60px #ff00ff; }
-      to { text-shadow: 0 0 50px #00ffe0, 0 0 80px #ff00ff; }
+    .top-nav {
+      display: flex;
+      justify-content: center;
+      gap: 0.9rem;
+      flex-wrap: wrap;
+      padding: 0.9rem 1rem;
+      margin: 1rem auto 1.5rem;
+      background: rgba(5, 12, 29, 0.68);
+      border: 1px solid rgba(105, 243, 255, 0.16);
+      border-radius: 999px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(16px);
+      width: fit-content;
+      max-width: 100%;
     }
 
-    header h2 {
-      font-size: 1.8rem;
-      color: #f4d35e;
-      margin-top: 0.5rem;
-      letter-spacing: 2px;
+    .top-nav a {
+      color: var(--muted);
+      padding: 0.75rem 1rem;
+      border-radius: 999px;
+      transition: 0.25s ease;
+      font-size: 0.95rem;
     }
 
-    main {
+    .top-nav a:hover,
+    .top-nav a.active {
+      color: var(--text);
+      background: linear-gradient(135deg, rgba(0,255,224,0.18), rgba(211,105,255,0.18));
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.06);
+    }
+
+    .hero {
       display: grid;
-      gap: 2rem;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      max-width: 1200px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-      position: relative;
-      z-index: 1;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 1.4rem;
+      align-items: stretch;
+      padding: 1rem 0 2rem;
     }
 
-    section {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(15px);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: 20px;
+    .hero-card,
+    .stats-card,
+    .intro-card,
+    .project-card,
+    .cta-card,
+    .footer-card {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+    }
+
+    .hero-card {
+      padding: 2.2rem;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      padding: 0.45rem 0.85rem;
+      border: 1px solid rgba(105,243,255,0.22);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.04);
+      color: var(--cyan);
+      font-size: 0.88rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 {
+      margin: 0 0 0.6rem;
+      font-family: 'Orbitron', sans-serif;
+      font-size: clamp(2.4rem, 5vw, 4.7rem);
+      line-height: 1.05;
+      letter-spacing: 0.04em;
+      text-shadow: 0 0 24px rgba(105,243,255,0.3), 0 0 34px rgba(211,105,255,0.15);
+    }
+
+    .hero .role-lines {
+      font-size: 1.02rem;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 65ch;
+      font-size: 1rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      margin-top: 1.5rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0.85rem 1.25rem;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.08);
+      transition: 0.25s ease;
+      font-weight: 600;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, rgba(0,255,224,0.26), rgba(211,105,255,0.28));
+      color: white;
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.04);
+      color: var(--text);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.22);
+    }
+
+    .stats-card {
+      padding: 1.6rem;
+      display: grid;
+      gap: 1rem;
+      align-content: start;
+    }
+
+    .stat-box {
+      padding: 1.1rem;
+      border-radius: var(--radius-lg);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .stat-box strong {
+      display: block;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.7rem;
+      color: var(--cyan-strong);
+      margin-bottom: 0.25rem;
+    }
+
+    .stat-box span {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .section-block {
+      margin: 0 0 1.6rem;
+    }
+
+    .intro-card {
       padding: 2rem;
-      box-shadow: inset 0px 0px 15px rgba(0, 0, 0, 0.4), 0px 10px 30px rgba(0, 255, 234, 0.7);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .section-title h2 {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      font-size: clamp(1.4rem, 2.4vw, 2rem);
+      color: var(--cyan);
+      letter-spacing: 0.04em;
+    }
+
+    .section-title p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.2rem;
+    }
+
+    .project-card {
       overflow: hidden;
-      position: relative;
+      transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
     }
 
-    section:hover {
-      transform: translateY(-15px) scale(1.05);
-      box-shadow: 0 15px 40px rgba(0, 255, 234, 0.8), 0 0 60px rgba(255, 0, 255, 0.9);
+    .project-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(105, 243, 255, 0.34);
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(105,243,255,0.08);
     }
 
-    section::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
+    .project-card a {
+      display: block;
+      height: 100%;
+    }
+
+    .project-image {
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.03);
+    }
+
+    .project-image img {
       width: 100%;
       height: 100%;
-      background: linear-gradient(45deg, rgba(0, 255, 234, 0.2), rgba(255, 0, 255, 0.2));
-      opacity: 0.2;
-      z-index: 0;
+      object-fit: cover;
+      transition: transform 0.35s ease;
     }
 
-    section h3 {
+    .project-card:hover .project-image img {
+      transform: scale(1.05);
+    }
+
+    .project-content {
+      padding: 1.1rem 1.1rem 1.25rem;
+    }
+
+    .project-content h3 {
+      margin: 0 0 0.55rem;
+      color: var(--text);
+      font-size: 1.02rem;
+      line-height: 1.45;
+    }
+
+    .project-content p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .cta-card {
+      padding: 1.8rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 1.5rem;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 1.5rem 0 2rem;
+    }
+
+    .cta-card h2 {
+      margin: 0 0 0.45rem;
       font-family: 'Orbitron', sans-serif;
-      text-shadow: 0 0 15px #00ffe0;
-      color: #00ffe0;
-      position: relative;
-      z-index: 1;
+      color: var(--text);
     }
 
-    p {
-      font-size: 1.2rem;
-      line-height: 1.8;
-      color: #b3d9ff;
-      position: relative;
-      z-index: 1;
+    .cta-card p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 60ch;
     }
 
-    a {
-      color: #00ffe0;
-      text-decoration: none;
-      font-weight: bold;
-      position: relative;
-      z-index: 1;
+    .footer-card {
+      padding: 1.35rem 1.4rem;
+      margin: 0 0 2rem;
     }
 
-    a:hover {
-      color: #ff00ff;
-      text-decoration: underline;
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
     }
 
-    img {
-      border: 2px solid #00ffe0;
-      border-radius: 12px;
-      width: 100%;
-      max-width: 300px;
-      transition: transform 0.3s, box-shadow 0.3s;
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
     }
 
-    img:hover {
-      transform: rotateY(10deg) scale(1.1);
-      box-shadow: 0 0 30px #00ffe0, 0 0 60px #ff00ff;
+    .footer-links a {
+      color: var(--cyan);
     }
 
-    nav {
-      background: rgba(0, 0, 0, 0.8);
-      backdrop-filter: blur(15px);
-      padding: 1.5rem;
-      margin: 3rem auto;
-      text-align: center;
-      border-radius: 20px;
-      box-shadow: 0px 4px 30px rgba(0, 255, 255, 0.8);
-      position: relative;
-      z-index: 1;
+    .footer-links a:hover {
+      color: white;
     }
 
-    nav a {
-      color: #00ffe0;
-      margin: 0 1.5rem;
-      font-family: 'Orbitron', sans-serif;
-      text-shadow: 0 0 15px #00ffe0;
-      padding: 0.7rem 1.5rem;
-      background: linear-gradient(145deg, rgba(0, 255, 234, 0.3), transparent);
-      border-radius: 8px;
-      transition: background 0.3s, transform 0.3s;
+    .muted {
+      color: var(--muted);
     }
 
-    nav a:hover {
-      background: rgba(0, 255, 234, 0.5);
-      transform: translateY(-5px);
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
     }
 
-    hr {
-      border: 1px solid rgba(0, 255, 234, 0.5);
-      margin: 2rem 0;
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .top-nav {
+        border-radius: 24px;
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        width: min(calc(100% - 1rem), var(--max-width));
+      }
+
+      .hero-card,
+      .intro-card,
+      .cta-card,
+      .stats-card,
+      .footer-card {
+        padding: 1.2rem;
+      }
+
+      .hero h1 {
+        font-size: clamp(2rem, 10vw, 3rem);
+      }
+
+      .hero-actions,
+      .footer-inner,
+      .cta-card {
+        align-items: stretch;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .background-cube-container {
+        width: 220px;
+        height: 220px;
+      }
+
+      .background-cube .face {
+        width: 220px;
+        height: 220px;
+        font-size: 1.2rem;
+      }
+
+      .front  { transform: rotateY(0deg) translateZ(110px); }
+      .back   { transform: rotateY(180deg) translateZ(110px); }
+      .right  { transform: rotateY(90deg) translateZ(110px); }
+      .left   { transform: rotateY(-90deg) translateZ(110px); }
+      .top    { transform: rotateX(90deg) translateZ(110px); }
+      .bottom { transform: rotateX(-90deg) translateZ(110px); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+      }
     }
   </style>
 </head>
-
 <body>
-  <!-- Multiple Background Cubes -->
-  <div class="background-cube-container cube1">
+  <div class="background-grid" aria-hidden="true"></div>
+
+  <div class="background-cube-container cube1" aria-hidden="true">
     <div class="background-cube">
       <div class="face front">AI</div>
       <div class="face back">IoT</div>
       <div class="face right">CV</div>
       <div class="face left">FPGA</div>
-      <div class="face top">Cyber</div>
+      <div class="face top">Cloud</div>
       <div class="face bottom">ML</div>
     </div>
   </div>
-  <div class="background-cube-container cube2">
+
+  <div class="background-cube-container cube2" aria-hidden="true">
     <div class="background-cube">
-      <div class="face front">AI</div>
-      <div class="face back">IoT</div>
-      <div class="face right">CV</div>
-      <div class="face left">FPGA</div>
-      <div class="face top">Cyber</div>
-      <div class="face bottom">ML</div>
+      <div class="face front">LLM</div>
+      <div class="face back">Cyber</div>
+      <div class="face right">Data</div>
+      <div class="face left">CAD</div>
+      <div class="face top">Code</div>
+      <div class="face bottom">Build</div>
     </div>
   </div>
-  <div class="background-cube-container cube3">
+
+  <div class="background-cube-container cube3" aria-hidden="true">
     <div class="background-cube">
-      <div class="face front">AI</div>
-      <div class="face back">IoT</div>
-      <div class="face right">CV</div>
-      <div class="face left">FPGA</div>
-      <div class="face top">Cyber</div>
-      <div class="face bottom">ML</div>
+      <div class="face front">AWS</div>
+      <div class="face back">Apps</div>
+      <div class="face right">Bots</div>
+      <div class="face left">Labs</div>
+      <div class="face top">DSP</div>
+      <div class="face bottom">EDA</div>
     </div>
   </div>
 
-  <!-- Main Content -->
-  <header>
-    <h1>Htet Paing Aung</h1>
-    <h2>
-  <span>Electronic Engineering | AI | ML | Deep Learning</span><br />
-  <span>LLM | FPGA | IoT | Data Science | Embedded</span><br />
-  <span>Cloud | AWS | Data Analytics</span>
-    </h2>
+  <header class="site-header">
+    <div class="container">
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a href="#projects" class="active">Projects</a>
+        <a href="./public/about.html">About Me</a>
+        <a href="./public/contact.html">Contact</a>
+        <a href="./public/certs.html">Certificates</a>
+      </nav>
 
-    <section>
-      <h3>Personal brief</h3>
-      <p>
-👨‍💻 As a passionate technologist and engineer, I love getting hands-on with a wide range of projects—from electronics ⚡ to software and computing 💻. This portfolio showcases some of the creations I’ve built over time, including LLM-based chatbots 🤖, live playable games 🎮, and ethical hacking labs 🛡️.
+      <section class="hero" aria-label="Introduction">
+        <div class="hero-card">
+          <div class="eyebrow">Engineering • AI • Embedded Systems</div>
+          <h1>Htet Paing Aung</h1>
+          <div class="role-lines">
+            Electronic Engineering • Artificial Intelligence • Machine Learning<br />
+            LLM • FPGA • IoT • Embedded Systems • Cloud • AWS • Data Analytics
+          </div>
+          <p>
+            I am a hands-on technologist who enjoys building across hardware and software — from electronics and digital systems to AI agents, machine learning workflows, playable games, and cybersecurity labs. This portfolio highlights practical projects that combine engineering, experimentation, and real implementation.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects">Explore Projects</a>
+            <a class="btn btn-secondary" href="./public/contact.html">Get in Touch</a>
+          </div>
+        </div>
 
-🤔  I’ve gained rich, hands-on experience through diverse and challenging personal projects 🔧. If you're looking for something fun, head over to the games section—yes, they’re fully playable! 🕹️ Or, try chatting with the AI bots I’ve built—you might be surprised how engaging they are 🗨️.
-
-📚 Everything here, especially the ethical hacking content, is intended for educational purposes only. So take a look around, explore the projects, and most importantly—have fun with games! 🚀
-      </p>
-    </section>
+        <aside class="stats-card" aria-label="Highlights">
+          <div class="stat-box">
+            <strong>10+</strong>
+            <span>Project categories across AI, embedded systems, FPGA, software, and electronics</span>
+          </div>
+          <div class="stat-box">
+            <strong>Hands-on</strong>
+            <span>Built from real experimentation, prototyping, implementation, and learning</span>
+          </div>
+          <div class="stat-box">
+            <strong>Practical</strong>
+            <span>Focused on working demos, applied skills, and educational documentation</span>
+          </div>
+        </aside>
+      </section>
+    </div>
   </header>
 
-  <main>
-    <section>
-      <h3><a href="./public/IOT.html">Internet of Things Projects</a></h3>
-      <img src="./assets/images/IOT.png" alt="IoT projects" />
+  <main class="container">
+    <section class="section-block intro-card" aria-labelledby="about-brief">
+      <div class="section-title">
+        <div>
+          <h2 id="about-brief">Personal Brief</h2>
+          <p>A quick overview of what you will find in this portfolio.</p>
+        </div>
+      </div>
+      <p>
+        As a passionate engineer and builder, I enjoy exploring a wide range of technical domains — from electronics and embedded systems to AI, machine vision, cloud workflows, and software applications. Many of the projects here were developed through personal experimentation and self-driven problem solving.
+      </p>
+      <p>
+        You will find LLM-based chatbot systems, practical FPGA work, IoT builds, digital design, games, GUI applications, and educational ethical hacking labs. The goal of this portfolio is not only to present finished work, but also to reflect curiosity, growth, and hands-on technical depth.
+      </p>
+      <p>
+        All cybersecurity-related content is presented strictly for educational and ethical learning purposes.
+      </p>
     </section>
-    <section>
-      <h3><a href="./public/CV.html">Machine Vision Projects</a></h3>
-      <img src="./assets/images/CV.png" alt="Computer Vision projects" />
-    </section>
-    <section>
-      <h3><a href="./public/embedded.html">Embedded and Digital Systems Projects with C++ and verilog</a></h3>
-      <img src="./assets/images/embedded.png" alt="Embedded Systems projects" />
-    </section>
-    <section>
-      <h3><a href="./public/aiproj.html">Artificial Intelligent Model Training and Deployment</a></h3>
-      <img src="./assets/images/2.png" alt="AI training and deployment" />
-    </section>
-    <section>
-      <h3><a href="./public/games.html">Games</a></h3>
-      <img src="./assets/images/games.png" alt="GUI APPS projects" />
-    </section>
-     <section>
-      <h3><a href="./public/ethicalhacking.html">Ethical Hacking Labs</a></h3>
-      <img src="./assets/images/X.png" alt="Ethical Hacking Labs" />
-    </section>
-      <section>
-      <h3><a href="./public/e.html">Electronic Projects</a></h3>
-      <img src="./assets/images/e.png" alt="Electronic Projects" />
-    </section>
-     <section>
-      <h3><a href="./public/CAD.html">CAD design Projects</a></h3>
-      <img src="./assets/images/CAD.png" alt="CAD Projects" />
-    </section>
-    <section>
-      <h3><a href="./public/softwares.html">Softwares/Apps with GUI projects</a></h3>
-      <img src="./assets/images/softwares.png" alt="GUI APPS projects" />
-    </section>
-    <section>
-      <h3><a href="./public/FPGA.html">Pratical FPGA projects with vivado and verilog video tutorials</a></h3>
-      <img src="./assets/images/FPGA.png" alt="Pratical FPGA projects with vivado and verilog" />
-    </section>
-    <section>
-      <h3><a href="./public/certs.html">Certificates Achieved</a></h3>
-      <img src="./assets/images/1.png" alt="Certificates Achieved" />
-    </section>
-  </main>
-  <nav>
-    <a href="./public/about.html">About Me</a>
-    <a href="./public/contact.html">Contact Me</a>
-  </nav>
-</body>
 
+    <section class="section-block" id="projects" aria-labelledby="projects-heading">
+      <div class="section-title">
+        <div>
+          <h2 id="projects-heading">Project Categories</h2>
+          <p>Browse the main areas of work featured in the portfolio.</p>
+        </div>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card">
+          <a href="./public/IOT.html" aria-label="Open Internet of Things Projects">
+            <div class="project-image">
+              <img src="./assets/images/IOT.png" alt="Internet of Things projects preview" loading="lazy" />
+            </div>
+            <div class="project-content">
+              <h3>Internet of Things Projects</h3>
+              <p>Connected device builds, sensing systems, and applied IoT implementations.</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="project-card">
+          <a href="./public/CV.html" aria-label="Open Machine Vision Projects">
+            <div class="project-image">
+              <img src="./assets/images/CV.png" alt="Machine vision projects preview" loading="lazy" />
+            </div>
+            <div class="project-content">
+              <h3>Machine Vision Projects</h3>
+              <p>Computer vision experiments, image processing, and intelligent visual systems.</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="project-card">
+          <a href="./public/embedded.html" aria-label="Open Embedded and Digital Systems Projects">
+            <div class="project-image">
+              <img src="./assets/images/embedded.png" alt="Embedded and digital systems projects preview" loading="lazy" />
+            </div>
+            <div class="project-content">
+              <h3>Embedded and Digital Systems</h3>
+              <p>C++, Verilog, digital logic, and hardware-focused system design projects.</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="project-card">
+          <a href="./public/aiproj.html" aria-label="Open Artificial Intelligence Projects">
+            <div class="project-image">
+              <img src="./assets/images/2.png" alt="Artificial intelligence projects preview" loading="lazy" />
+            </div>
+            <div class="project-content">
+              <h3>Artificial Intelligence Model Training and Deployment</h3>
+              <p>AI workflows, model building, deployment pipelines, and practical experimentation.</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="project-card">
+          <a href="./public/games.html" aria-label="Open Games">
+            <div class="project-image">
+              <img src="./assets/images/games.png" alt="Games projects preview" loading="lazy" />
+            </div>
+            <div class="project-content">
+              <h3>Games</h3>
+              <p>Playable projects built for interaction, experimentation, and fun.</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="project-card">
+          <a href="./public/ethicalhacking.html" aria-label="Open Ethical Hacking Labs">
+            <div class="project-image">
+              <img src="./assets/images/X.png" alt="Ethical hacking labs preview" loading="lazy" />
+            </div>
+            <div class="project-content">
+              <h3>Ethical Hacking Labs</h3>
+              <p>Educational labs focused on security concepts, testing, and responsible learning.</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="project-card">
+          <a href="./public/e.html" aria-label="Open Electronic Projects">
+            <div class="project-image">
+              <img src="./assets/images/e.png" alt="Electronic projects preview" loading="lazy" />
+            </div>
+            <div class="project-content">
+              <h3>Electronic Projects</h3>
+              <p>Circuit-based work, practical electronics, and engineering experiments.</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="project-card">
+          <a href="./public/CAD.html" aria-label="Open CAD Design Projects">
+            <div class="project-image">
+              <img src="./assets/images/CAD.png" alt="CAD design projects preview" loading="lazy" />
+            </div>
+            <div class="project-content">
+              <h3>CAD Design Projects</h3>
+              <p>Design modeling, technical drafting, and CAD-based engineering work.</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="project-card">
+          <a href="./public/softwares.html" aria-label="Open Software and GUI Applications">
+            <div class="project-image">
+              <img src="./assets/images/softwares.png" alt="Software and GUI application projects preview" loading="lazy" />
+            </div>
+            <div class="project-content">
+              <h3>Software and GUI Applications</h3>
+              <p>Desktop software, utility tools, and interface-driven projects.</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="project-card">
+          <a href="./public/FPGA.html" aria-label="Open FPGA Projects">
+            <div class="project-image">
+              <img src="./assets/images/FPGA.png" alt="FPGA projects preview" loading="lazy" />
+            </div>
+            <div class="project-content">
+              <h3>Practical FPGA Projects with Vivado and Verilog</h3>
+              <p>Digital design tutorials, FPGA implementations, and hardware development practice.</p>
+            </div>
+          </a>
+        </article>
+
+        <article class="project-card">
+          <a href="./public/certs.html" aria-label="Open Certificates">
+            <div class="project-image">
+              <img src="./assets/images/1.png" alt="Certificates preview" loading="lazy" />
+            </div>
+            <div class="project-content">
+              <h3>Certificates Achieved</h3>
+              <p>Recognitions, course completions, and professional development milestones.</p>
+            </div>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta-card" aria-labelledby="cta-heading">
+      <div>
+        <h2 id="cta-heading">Want to know more?</h2>
+        <p>Use the About and Contact pages to learn more about my background, skills, and project interests.</p>
+      </div>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="./public/about.html">About Me</a>
+        <a class="btn btn-secondary" href="./public/contact.html">Contact Me</a>
+      </div>
+    </section>
+
+    <footer class="footer-card">
+      <div class="footer-inner">
+        <div>
+          <strong>Htet Paing Aung</strong><br />
+          <span class="muted">Electronic Engineering • AI • Embedded Systems • Cloud</span>
+        </div>
+        <div class="footer-links" aria-label="Footer links">
+          <a href="./public/about.html">About</a>
+          <a href="./public/contact.html">Contact</a>
+          <a href="./public/certs.html">Certificates</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+</body>
 </html>
